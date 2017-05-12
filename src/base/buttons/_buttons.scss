@@ -1,0 +1,140 @@
+.btn,
+button,
+[role="button"],
+[type="button"],
+input[type="submit"]
+input[type="reset"],
+input[type="button"] {
+  @include btn();
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, false, $gray-outline);
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+.btn-primary {       @include button-variant($btn-primary-color, $btn-primary-bg, true); }
+.btn-info {          @include button-variant($btn-info-color, $btn-info-bg, true);  }
+.btn-success {       @include button-variant($btn-success-color, $btn-success-bg, true);  }
+.btn-warning {       @include button-variant($btn-warning-color, $btn-warning-bg, true);  }
+.btn-danger {        @include button-variant($btn-danger-color, $btn-danger-bg, true);  }
+.btn-white {         @include button-variant($brand-primary, #fff, false);  }
+
+
+.btn-flat-primary {  @include button-variant($btn-primary-color, $btn-primary-bg, false);  }
+.btn-flat-info {     @include button-variant($btn-info-color, $btn-info-bg, false);  }
+.btn-flat-success {  @include button-variant($btn-success-color, $btn-success-bg, false);  }
+.btn-flat-warning {  @include button-variant($btn-warning-color, $btn-warning-bg, false);  }
+.btn-flat-danger {   @include button-variant($btn-danger-color, $btn-danger-bg, false);  }
+.btn-white-alpha {   @include button-variant(#fff, rgba(#fff, .3), false, rgba(#fff, .35));  }
+
+.btn-outline {
+  @include btn-outline;
+}
+
+.btn-outline-primary {  @include button-outline-variant($btn-primary-bg);  }
+.btn-outline-info {     @include button-outline-variant($btn-info-bg);  }
+.btn-outline-success {  @include button-outline-variant($btn-success-bg);  }
+.btn-outline-warning {  @include button-outline-variant($btn-warning-bg);  }
+.btn-outline-danger {   @include button-outline-variant($btn-danger-bg);  }
+.btn-outline-white {
+  @include button-outline-variant(#fff);
+
+  @include hover-focus-active {
+    color: $brand-inverse;
+    background-color: #fff;
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  @include btn-link();
+}
+
+.btn-link-primary {  @include btn-link($btn-primary-bg);  }
+.btn-link-info {     @include btn-link($btn-info-bg);  }
+.btn-link-success {  @include btn-link($btn-success-bg);  }
+.btn-link-danger {   @include btn-link($btn-danger-bg);  }
+.btn-link-warning {  @include btn-link($btn-warning-bg);  }
+
+
+
+//
+// Button Sizes
+//
+
+.btn-xs {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-border-radius-sm);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+}
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+}
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-padding-font-xl, $btn-border-radius-lg);
+}
+
+.btn-ui-form {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size(1.3rem, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+  height: 4rem;
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-down($breakpoint) {
+
+    .btn-block-#{$breakpoint}-down   {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn-square {
+  height: 3rem;
+  line-height: 3rem;
+  min-width: 3rem;
+  font-size: 1rem;
+  padding: 0 .2rem;
+}

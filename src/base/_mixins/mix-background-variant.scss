@@ -1,0 +1,32 @@
+// Contextual backgrounds
+
+//@mixin bg-variant($parent, $color, $link: #fff) {
+//  #{$parent} {
+//    color: #fff !important;
+//    background-color: $color !important;
+//    @include gradient-directional(lighten($color, 10%), $color, 125deg);
+//  }
+//  a#{$parent} {
+//    @include hover-focus {
+//      background-color: darken($color, 10%) !important;
+//    }
+//  }
+//  a {
+//    @include link(#fff, $gray-outline, true, false);
+//  }
+//}
+
+@mixin bg-variant($background, $background-lighter: lighten($background, 10%), $text-color: #fff, $link-color: #fff) {
+    color: $text-color !important;
+    @include gradient-directional($background-lighter, $background, 125deg);
+
+ // a {
+ //   @include link-color($link-color, rgba($link-color, .9));
+ // }
+
+  .btn-outline-white {
+    @include hover-focus-active {
+      color: darken($background, 10%);
+    }
+  }
+}

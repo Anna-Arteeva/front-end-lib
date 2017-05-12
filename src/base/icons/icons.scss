@@ -1,0 +1,79 @@
+.icon {
+  @include icon-size();
+  @include icon-color();
+  display: inline-block;
+  stroke-width: 0;
+}
+
+.line-icon {
+  @include icon-size();
+  @include line-icon-color();
+  display: inline-block;
+  stroke-linecap: round;
+  stroke-width: 3px;
+
+  &.icon-xs {   stroke-width: 5px;}
+  &.icon-sm {   stroke-width: 4px;}
+  &.icon-lg {   stroke-width: 2px;}
+  &.icon-xlg {  stroke-width: 1.5px;}
+  &.icon-xl {   stroke-width: 1px;}
+}
+
+.line-icon-thin {
+  stroke-linecap: round;
+  stroke-width: .5px;
+}
+
+.line-icon-bold {
+  stroke-linecap: round;
+  stroke-width: 4px;
+}
+
+//sizes
+
+.icon-xs {          @include icon-size($font-size-xs);  }
+.icon-sm {          @include icon-size($font-size-sm);  }
+.icon-size-base {   @include icon-size($font-size-base);  }
+.icon-lg {          @include icon-size($font-size-lg);  }
+.icon-xlg {         @include icon-size($font-size-xlg);  }
+.icon-xl {          @include icon-size($font-size-xl);  }
+
+h1, .h1 { .icon, .line-icon {   @include icon-size($font-size-h1);  } }
+h2, .h2 { .icon, .line-icon {   @include icon-size($font-size-h2);  } }
+h3, .h3 { .icon, .line-icon {   @include icon-size($font-size-h3);  } }
+h4, .h4 { .icon, .line-icon {   @include icon-size($font-size-h4);  } }
+h5, .h5 { .icon, .line-icon {   @include icon-size($font-size-h5);  } }
+h6, .h6 { .icon, .line-icon {   @include icon-size($font-size-h6);  } }
+
+
+//colors
+.icon {
+  &.icon-dark {        @include icon-color($gray-dark);  }
+  &.icon-base {        @include icon-color($gray-base);  }
+  &.icon-base-light {  @include icon-color($gray-base-light);  }
+  &.icon-outline {     @include icon-color($gray-outline);  }
+  &.icon-white {       @include icon-color(#fff);  }
+  &.icon-muted {       @include icon-color($gray-muted);  }
+  &.icon-brand {       @include icon-color($brand-primary);  }
+  &.icon-secondary {   @include icon-color($brand-secondary);  }
+  &.icon-danger {      @include icon-color($brand-danger);  }
+  &.icon-success {     @include icon-color($brand-success);  }
+  &.icon-warning {     @include icon-color($brand-warning); }
+  &.icon-info {        @include icon-color($brand-info); }
+  &.icon-inverse {     @include icon-color($brand-inverse); }
+}
+
+.line-icon {
+  &.icon-dark {        @include line-icon-color($gray-dark);  }
+  &.icon-base-light {  @include line-icon-color($gray-base-light);  }
+  &.icon-outline {     @include line-icon-color($gray-outline);  }
+  &.icon-white {       @include line-icon-color(#fff);  }
+  &.icon-muted {       @include line-icon-color($gray-muted);  }
+  &.icon-brand {       @include line-icon-color($brand-primary);  }
+  &.icon-secondary {   @include line-icon-color($brand-secondary);  }
+  &.icon-danger {      @include line-icon-color($brand-danger);  }
+  &.icon-success {     @include line-icon-color($brand-success);  }
+  &.icon-warning {     @include line-icon-color($brand-warning); }
+  &.icon-info {        @include line-icon-color($brand-info); }
+  &.icon-inverse {     @include line-icon-color($brand-inverse); }
+}

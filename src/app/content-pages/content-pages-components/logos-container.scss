@@ -1,0 +1,14 @@
+.logos-container {
+  border-top: 1px solid $gray-outline-alpha;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  > * {
+	margin: 1rem;
+  }
+}

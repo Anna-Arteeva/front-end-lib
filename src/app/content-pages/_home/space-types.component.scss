@@ -1,0 +1,28 @@
+.img-frame.space-types_img {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-down(md) {
+    max-width: 60%;
+    margin-left: 1rem;
+  }
+}
+
+.space-types_tabs {
+  border-bottom: 1px solid $gray-outline;
+
+  @include media-breakpoint-down(xl) {
+    padding-left: 1rem;
+  }
+
+  > * {
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-left: .1rem;
+      margin-right: .1rem;
+    }
+  }
+}

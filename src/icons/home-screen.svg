@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="786px" height="786px" viewBox="0 0 786 786" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>home-screen</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="93.6339833%" y1="84.6117424%" x2="5.93175238%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#0B8AC2" offset="0%"></stop>
+            <stop stop-color="#4BBFF1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-screen">
+            <g id="Group">
+                <rect id="Rectangle" x="0" y="0" width="786" height="786"></rect>
+                <rect id="Combined-Shape-Copy" fill="url(#linearGradient-1)" opacity="0.7" x="0" y="132" width="786" height="485" rx="2"></rect>
+                <path d="M504.839057,685 L294.177291,685 C294.177291,685 293.618229,736.467191 277.972541,751.44357 C262.326853,766.419953 233.720068,768.027888 229.358287,772.705513 C227.754018,775.663581 227.3516,778.90337 229.358287,780.678743 C240.345108,786.387574 375.725001,785.99423 399.508172,785.99423 C423.291346,785.99423 558.67124,786.387574 569.658061,780.678743 C571.662045,778.90337 571.262329,775.663581 569.658061,772.705513 C565.296279,768.027888 536.689495,766.419953 521.043807,751.44357 L504.839057,685 Z" id="Path-path-Copy" fill="url(#linearGradient-1)" opacity="0.5"></path>
+                <rect id="Rectangle-2-Copy-3" fill="url(#linearGradient-1)" opacity="0.5" x="0" y="619" width="786" height="64" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

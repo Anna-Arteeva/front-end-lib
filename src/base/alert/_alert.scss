@@ -1,0 +1,71 @@
+$alert-padding:               1rem !default;
+
+//
+// Base styles
+//
+
+.alert {
+  padding: $alert-padding;
+  margin-bottom: $spacer-y;
+  border: $border-width solid transparent;
+  @include border-radius($border-radius);
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-primary {
+  @include bg-variant($brand-primary);
+
+  a {
+    @include link(#fff, rgba(#fff, .9), true, false)
+  }
+}
+.alert-success {
+  @include bg-variant($brand-success);
+
+  a {  @include link(#fff, rgba(#fff, .9), true, false)  }
+}
+.alert-warning {
+  @include bg-variant($brand-warning);
+
+  a {  @include link(#fff, rgba(#fff, .9), true, false)  }
+}
+.alert-danger  {
+  @include bg-variant($brand-danger);
+
+  a {  @include link(#fff, rgba(#fff, .9), true, false)  }
+}
+.alert-inverse {
+  @include bg-variant($brand-inverse);
+
+  a {  @include link(#fff, rgba(#fff, .9), true, false)  }
+}
+
+.alert-info {
+  color: $brand-info;
+  border: 1px solid rgba($brand-info, .1);
+  background-color: rgba($brand-info, .03);
+  // this one has a standart link style
+}
+
+
+
+// Does not work because there is no jQuery
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+//.alert-dismissible {
+//  padding-right: ($alert-padding * 2);
+//
+//  // Adjust close link position
+//  .close {
+//    position: relative;
+//    top: -.125rem;
+//    right: -$alert-padding;
+//    color: inherit;
+//  }
+//}
+//

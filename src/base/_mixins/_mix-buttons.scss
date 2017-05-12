@@ -1,0 +1,181 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: .02em;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+  @include transition(all .2s ease-in-out);
+
+  @include hover-focus-active {
+    text-decoration: none;
+    background-image: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: $cursor-disabled;
+    opacity: .65;
+    @include box-shadow(none);
+
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      outline: 0;
+    }
+  }
+}
+
+@mixin btn-outline {
+  color: $gray-muted;
+  background-image: none;
+  background-color: transparent;
+  border-color: $gray-outline;
+
+  @include hover-focus-active{
+    color: $brand-primary;
+    border-color: $brand-primary;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  &:hover,
+  .open > &.dropdown-toggle {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $brand-primary;
+      background-color: #fff;
+      border-color: $brand-primary;
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    border-color: $gray-outline;
+    color: $gray-muted;
+    background: transparent;
+
+    &:focus,
+    &.focus {
+      border-color: $gray-outline;
+      color: $gray-muted;
+      background: transparent;
+    }
+  }
+}
+
+@mixin button-variant($color, $background, $gradient: true, $border: $background) {
+  $active-background: darken($background, 5%);
+  color: $color;
+
+  @if $gradient {
+    @include gradient-directional(lighten($background, 10%), $background, 125deg);
+    border-color: lighten($border, 10%);
+  } @else {
+    background: $background;
+    border-color: $border;
+  }
+
+  @include hover-focus-active {
+    @if $gradient {
+      @include gradient-directional($background, $background, 125deg);
+      color: $color;
+    } @else {
+      background: $active-background;
+      color: $color;
+    }
+  }
+
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-color: darken($background, 7%);
+    border-color: darken($border, 7%);
+    outline: 4px auto lighten($background, 10%);
+    outline-offset: -2px;
+  }
+}
+
+@mixin button-outline-variant($color, $border: $color) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: $border;
+
+  @include hover-focus-active{
+    color: #fff;
+    background-color: $color;
+        border-color: $color;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken($color, 7%);
+          border-color: darken($color, 7%);
+    }
+  }
+
+  &.disabled,
+  &:disabled {
+    border-color: $border;
+    color: $color;
+    background: transparent;
+
+    &:focus,
+    &.focus {
+      border-color: $border;
+      color: $color;
+      background: transparent;
+    }
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  @include border-radius($border-radius);
+}
+
+@mixin btn-link($color: $link-color) {
+  font-weight: normal;
+  border: 0;
+  background-color: transparent !important;
+  background-image: none; //remove gradient
+  color: $color;
+
+  @include hover-focus-active {
+    text-decoration: $link-hover-decoration;
+    color: darken($color, 7%);
+    border: 0;
+  }
+
+  &.disabled {
+    color: rgba($color, .5);
+    @include hover-focus-active {
+      text-decoration: none !important;
+      cursor: $cursor-disabled;
+      color: rgba($color, .5);
+      outline: 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// sass --watch src/main.scss:dist/main.css
+// sass --watch signkick-front-end/src/main.scss:/Users/Anna/signkick-dev/src/Signkick/Ui/WebUI/SkinBundle/Resources/public/css/lib/ui.css
+
+// Core variables
+@import "theme/variables";
+
+// Core styles and elements
+@import "base/base";
+
+// Core styles and elements
+// @import "app/content-pages/content-base";
+
+// Font Awesome CDN
+@import url('https://use.fontawesome.com/bb6483b96f.css');
+
+// Font Roboto CDN
+@import url('https://fonts.googleapis.com/css?family=Roboto:100, 200, 300,300i,400,400i,500,500i');

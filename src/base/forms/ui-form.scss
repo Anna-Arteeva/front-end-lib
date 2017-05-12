@@ -1,0 +1,94 @@
+
+$ui-form_input-padding-y: 1rem;
+$ui-form_input-padding-x:  1rem;
+$ui-form_input-line-height: 2rem;
+
+.ui-form {
+  position: relative;
+}
+
+.ui-form_label {
+  position: absolute;
+  top:  50%;
+  left: 1rem;
+  line-height: 1em;
+  margin-top: -.5em;
+  color: $gray-muted;
+  z-index: 5;
+  text-align: left;
+ // font-weight: 400;
+}
+
+.ui-form_label.ui-form_label__textarea {
+  top:  1rem;
+}
+
+.ui-form_label__external {
+  color: $gray-muted;
+  font-weight: 400;
+  font-size: .8em;
+  line-height: .9rem;
+  margin-bottom: .2rem;
+}
+
+.has-success {
+  .ui-form_label {
+    color: $brand-success;
+  }
+}
+
+.has-danger {
+  .ui-form_label {
+    color: $brand-danger;
+  }
+}
+
+.has-warning {
+  .ui-form_label {
+    color: $brand-warning;
+  }
+}
+
+.ui-form_input {
+  padding: ($ui-form_input-padding-y + .5rem) $ui-form_input-padding-x ($ui-form_input-padding-y - .5rem);
+  line-height: $ui-form_input-line-height;
+  height: 4rem;
+}
+
+.ui-form_input__sm {
+   height: 3.3rem;
+}
+
+.ui-form_input:focus ~ .ui-form_label,
+.ui-form_input:active ~ .ui-form_label,
+.ui-form.focused .ui-form_label,
+.ui-form.active .ui-form_label {
+  top: .9rem;
+  font-size: .8em;
+  transition: all .3s;
+}
+
+.ui-form_input__select {
+  &:not([size]):not([multiple]) {
+    height: 4rem !important;
+  }
+}
+
+//.ui-form_input:not([value]) ~ .ui-form_label
+
+.ui-form_group {
+  line-height: $ui-form_input-line-height + .5rem;
+
+  span {
+	line-height: $ui-form_input-line-height + .5rem;
+  }
+}
+
+// For jQuery validation messages, added as a label below the text input fields
+.ui-form_validation_label
+{
+  position:    absolute;
+  top:         50%;
+  line-height: 0;
+  right:       1rem;
+}

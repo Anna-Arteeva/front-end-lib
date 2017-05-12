@@ -1,0 +1,325 @@
+//
+// Basic Bootstrap table
+//
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacer;
+  border-bottom: 1px solid $table-border-color;
+  background: $table-bg;
+  font-weight: $font-weight-base;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  th, thead th {
+    font-size: .87em;
+    color: $brand-primary;
+    font-weight: $font-weight-regular;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (1 * $table-border-width) solid $table-border-color;
+    background-color: rgba($gray-back, .5);
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+}
+
+
+//
+// Condensed table w/ half padding
+//
+
+.table-sm {
+  th,
+  td {
+    padding: $table-sm-cell-padding;
+  }
+}
+
+.table-md {
+  th,
+  td {
+    padding: $table-md-cell-padding;
+  }
+}
+
+.table-lg {
+  th,
+  td {
+    padding: $table-lg-cell-padding;
+  }
+}
+
+.table-outline {
+  border: 1px solid $table-border-color;
+}
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+// Not bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-not-bordered {
+  border: 0;
+
+  th,
+  td {
+    border: 0;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: 0;
+    }
+  }
+}
+
+
+// Not bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered-vertical {
+  border: 0;
+
+  th,
+  td {
+    border-bottom: 0;
+    border-top: 0;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid $gray-outline;
+    }
+  }
+}
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $table-bg-accent;
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-bg-hover;
+    }
+  }
+  &.table-inverse {
+    tbody tr {
+      @include hover {
+        background-color: rgba(#fff, .01);
+      }
+    }
+  }
+}
+
+.table-hover_grouped-rows {
+  tbody {
+    @include hover {
+      background-color: $table-bg-hover;
+    }
+  }
+}
+.table-non-hover-row {
+  @include hover {
+    background-color: inherit !important;
+  }
+}
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+// Generate the contextual variants
+@include table-row-variant(active, $table-bg-active);
+@include table-row-variant(success, rgba($brand-success, .4));
+@include table-row-variant(info, rgba($brand-info, .3));
+@include table-row-variant(warning, rgba($brand-warning, .5));
+@include table-row-variant(danger, rgba($brand-danger, .3));
+
+
+// Inverse styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+.thead-inverse {
+  th {
+    color: #fff;
+    background-color: $brand-inverse;
+  }
+}
+
+.thead-default {
+  th {
+    color: $gray-base;
+    background-color: $gray-back;
+  }
+}
+
+.table-inverse {
+  color: $gray-back;
+  background-color: $brand-inverse;
+  border: 0;
+
+  th,
+  td,
+  thead th {
+    border-top: $table-border-width solid rgba(255,255,255,.05);
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (1 * $table-border-width) solid rgba(255,255,255,.05);
+    background-color: $brand-inverse;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+}
+
+
+
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+  overflow-x: auto;
+
+  // TODO: find out if we need this still.
+  //
+  // border: $table-border-width solid $table-border-color;
+  // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+}
+
+
+.table-reflow {
+  thead {
+    float: left;
+  }
+
+  tbody {
+    display: block;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    border-top: $table-border-width solid $table-border-color;
+    border-left: $table-border-width solid $table-border-color;
+
+    &:last-child {
+      border-right: $table-border-width solid $table-border-color;
+    }
+  }
+
+  thead,
+  tbody,
+  tfoot {
+    &:last-child {
+      tr:last-child th,
+      tr:last-child td {
+        border-bottom: $table-border-width solid $table-border-color;
+      }
+    }
+  }
+
+  tr {
+    float: left;
+
+    th,
+    td {
+      display: block !important;
+      border: $table-border-width solid $table-border-color;
+    }
+  }
+}
+
+.table .table-thead-transparent {
+  th {
+    background-color: transparent;
+    border-top: 0;
+    color: $gray-base-light;
+  }
+}
+
+.table-padding-optimised {
+  td, th {
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  &.table-sm tr:first-of-type td {
+    padding-top: $table-sm-cell-padding * 2;
+  }
+
+  &.table-md tr:first-of-type td {
+    padding-top: $table-md-cell-padding * 2;
+  }
+
+  &.table-lg tr:first-of-type td {
+    padding-top: $table-lg-cell-padding * 2;
+  }
+}
+
+.table-disabled {
+  color: $gray-muted !important;
+  background: $gray-back;
+  cursor: not-allowed;
+
+  td {
+    background: $gray-back;
+  }
+}

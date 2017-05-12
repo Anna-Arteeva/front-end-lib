@@ -1,0 +1,15 @@
+.cities-section {
+  @include bg-variant($brand-primary);
+}
+
+.cities-section_form {
+//  max-width: 26rem;
+}
+
+.cities-section_angle {
+//  @include icon-size(4rem);
+  stroke-width: 2px;
+
+  margin: auto;
+  display: block;
+}

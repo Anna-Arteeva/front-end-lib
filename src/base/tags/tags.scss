@@ -1,0 +1,110 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.tag {
+  @include tag();
+}
+
+.tag-light {
+  font-weight: $font-family-base;
+}
+
+.tag-text-normal {
+  font-size: 1em;
+}
+
+$tag-padding-square-y: 1rem;
+
+.tag-square {
+  height: 3rem;
+  line-height: 2.5rem;
+  min-width: 3rem;
+  font-size: 1rem;
+  font-weight: $font-weight-base;
+}
+
+// Quick fix for tags in buttons
+.btn [class^="tag-"] {
+  position: relative;
+  top: -1px;
+}
+
+// scss-lint:disable QualifyingElement
+// Add hover effects, but only for links
+a {
+  &[class^="tag-"] {
+    @include hover-focus {
+      color: $tag-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+// scss-lint:enable QualifyingElement
+
+// Pill tags
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.tag-pill {
+  padding: $tag-pill-padding-y $tag-pill-padding-x ($tag-pill-padding-y - 0.05);
+  @include border-radius($tag-pill-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked tags get darker on :hover).
+
+.tag-default {
+  @include tag-variant(transparent, $brand-primary, $brand-primary);
+}
+
+.tag-muted {
+  @include tag-variant($gray-outline, $gray-base-light);
+}
+
+.tag-primary {
+  @include tag-variant($tag-primary-bg);
+}
+
+.tag-success {
+  @include tag-variant($tag-success-bg);
+}
+
+.tag-info {
+  @include tag-variant($tag-info-bg);
+}
+
+.tag-warning {
+  @include tag-variant($tag-warning-bg);
+}
+
+.tag-danger {
+  @include tag-variant($tag-danger-bg);
+}
+
+.tag-primary-outline {
+  @include tag-variant(transparent, $brand-primary, $brand-primary);
+}
+
+
+.tag-count {
+  border-radius: .5rem;
+  position: absolute;
+  padding: 0.15em 0.35em 0.1em;
+  top: -.2rem;
+  right: -.4rem;
+
+
+  // Show a dot when empty
+  &:empty {
+    height: .5rem;
+    width:  .5rem;
+    padding: 0;
+    display: inline-block;
+    right: .1rem;
+    top: .2rem;
+  }
+}

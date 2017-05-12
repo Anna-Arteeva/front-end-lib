@@ -1,0 +1,22 @@
+// Contextual colors
+
+@include text-emphasis-variant('.text-base', $gray-base);
+
+@include text-emphasis-variant('.text-dark', $gray-dark);
+@include text-emphasis-variant('.text-base-light', $gray-base-light);
+
+@include text-emphasis-variant('.text-muted', $text-muted);
+
+@include text-emphasis-variant('.text-primary', $brand-primary);
+
+@include text-emphasis-variant('.text-secondary', $brand-secondary);
+
+@include text-emphasis-variant('.text-success', $brand-success);
+
+@include text-emphasis-variant('.text-info', $brand-info);
+
+@include text-emphasis-variant('.text-warning', $brand-warning);
+
+@include text-emphasis-variant('.text-danger', $brand-danger);
+
+@include text-emphasis-variant('.text-white', #fff);

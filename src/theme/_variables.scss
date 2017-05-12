@@ -1,0 +1,24 @@
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+@import "variables/var-colors";
+@import "variables/var-body";
+@import "variables/var-spacing";
+@import "variables/var-typography";
+@import "variables/var-border-radius";
+@import "variables/var-grid";
+@import "variables/var-buttons";
+@import "variables/var-forms";
+@import "variables/var-links";
+@import "variables/var-options";
+@import "variables/var-tables";
+@import "variables/var-z-index";
+@import "variables/var-images";
+@import "variables/var-pagination";
+@import "variables/var-components";
+@import "variables/var-tags";
+@import "variables/var-cards";
+@import "variables/var-tooltip";
+
+@import "variables/var-nav";

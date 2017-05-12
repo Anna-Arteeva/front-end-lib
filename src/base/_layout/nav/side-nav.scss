@@ -1,0 +1,115 @@
+$hamburger-duration: .2s;
+$side-nav-width: 250px;
+
+// TODO block page scrolling when menu is open (need js)
+
+// humburger icon
+.top-nav_hamburger {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.hamburger {
+  width: 1.5rem;
+  margin: 0 0 0 .5rem;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1rem;
+    Right: -1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: ($zindex-navbar + 1);
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    z-index: ($zindex-navbar - 1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(#fff, 0);
+    transition: background .6s;
+    width: 0;
+    height: 0;
+  }
+}
+
+.hamburger_line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border: 0;
+  border-radius: 1px;
+  background: $gray-outline-alpha;
+  margin: 4px 0;
+  z-index: ($zindex-navbar + 1);
+
+  position: relative;
+  transform-origin: 4px 0px;
+  transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  &:first-of-type {  transform-origin: 0% 0%;  }
+  &:last-of-type {  transform-origin: 0% 100%;  }
+}
+
+.hamburger_checkbox:checked ~ .hamburger {
+  &:before {
+    background: rgba(#fff, .6);
+    width: 100%;
+    height: 100%;
+  }
+
+  .hamburger_line_1 {
+    transform: rotate(45deg) translate(-4px, -1px);
+  }
+  .hamburger_line_2 {
+    transform: rotate(45deg) translate(-8px, -2px);
+    opacity: 0;
+  }
+  .hamburger_line_3 {
+    transform: rotate(-45deg) translate(-2px, -1px);
+  }
+}
+
+.hamburger_checkbox:checked ~ .side-nav {
+  width: $side-nav-width;
+
+  //  @include media-breakpoint-down(xs) {
+  //	width: 100vw;
+  //  }
+}
+
+// nav style
+
+.side-nav {
+  @include bg-variant($brand-inverse, $brand-inverse-light);
+  position: fixed;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: all $hamburger-duration;
+  transition-delay: $hamburger-duration;
+  z-index: $zindex-navbar;
+  overflow-y: scroll;
+
+  @include media-breakpoint-up(md) {
+	display: none;
+  }
+}
+
+.side-nav_content {
+  padding: 4rem 1rem 1rem;
+}
+
+.side-nav_link {
+  @include link(#fff, $brand-primary, false, false);
+  display: block;
+  padding: .3rem 0;
+}

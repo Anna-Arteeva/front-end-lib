@@ -1,0 +1,77 @@
+//This will make child element within grid block behave like columns. Width of each can depend on content though,
+//so specify it with flex-basis applied to child element or use grid modifier class
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+
+    .grid-#{$breakpoint} {
+      @include make-grid();
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $grid-gap: 1rem;
+  @include media-breakpoint-up($breakpoint) {
+
+    .grid-#{$breakpoint}-gap {
+      @include make-grid($grid-gap);
+    }
+  }
+
+  @include media-breakpoint-down($breakpoint) {
+    // there are both right and top margin on the breaking breakpoint
+
+    .grid-#{$breakpoint}-gap {
+      > div {
+        &:not(:last-of-type) {
+          margin-bottom: $grid-gap * 2;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $grid-gap: .5rem;
+
+  @include media-breakpoint-up($breakpoint) {
+
+    .grid-#{$breakpoint}-gap-sm {
+      @include make-grid($grid-gap);
+    }
+  }
+
+  @include media-breakpoint-down($breakpoint) {
+
+    .grid-#{$breakpoint}-gap-sm {
+      > div {
+        &:not(:last-of-type) {
+          margin-bottom: $grid-gap * 2;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $grid-gap: 1.5rem;
+
+  @include media-breakpoint-up($breakpoint) {
+
+    .grid-#{$breakpoint}-gap-lg {
+      @include make-grid($grid-gap);
+    }
+  }
+
+  @include media-breakpoint-down($breakpoint) {
+
+    .grid-#{$breakpoint}-gap-lg {
+      > div {
+        &:not(:last-of-type) {
+          margin-bottom: $grid-gap * 2;
+        }
+      }
+    }
+  }
+}

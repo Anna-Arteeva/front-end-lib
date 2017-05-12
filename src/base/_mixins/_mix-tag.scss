@@ -1,0 +1,30 @@
+// Tags
+
+@mixin tag() {
+  display: inline-block;
+  padding: $tag-padding-y $tag-padding-x ($tag-padding-y - .05em);
+  font-size: $tag-font-size;
+  font-weight: $tag-font-weight;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius();
+
+  // Empty tags collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+@mixin tag-variant($tag-bg, $tag-color: $tag-color, $tag-border: $tag-bg) {
+  background-color: $tag-bg;
+  color: $tag-color;
+  border: 1px solid $tag-border;
+
+  &[href] {
+    @include hover-focus {
+      background-color: darken($tag-bg, 10%);
+    }
+  }
+}

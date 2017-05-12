@@ -1,0 +1,60 @@
+// @mixin link($color: $link-color, $hover-color: $link-hover-color, $text-underline: false, $text-underline-hover: true)
+
+.link {
+  @include link();
+}
+
+.link-brand-plain {
+  @include link($brand-primary, darken($brand-primary, 10%));
+}
+
+.link-brand-underline {
+  @include link($brand-primary, darken($brand-primary, 10%), true, false);
+}
+
+.link-base-plain {
+  @include link($gray-base, $brand-primary);
+}
+
+.link-base-underline {
+  @include link($gray-base, $brand-primary, true, false);
+}
+
+.link-white-plain {
+  @include link(#fff, #fff);
+}
+
+.link-white-alpha {
+  @include link(#fff, rgba(#fff, 10%), false, false);
+}
+
+// And undo these styles for placeholder links/named anchors (without href)
+// which have not been made explicitly keyboard-focusable (without tabindex).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+// See https://github.com/twbs/bootstrap/issues/19402
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover-focus {
+	color: inherit;
+	text-decoration: none;
+  }
+
+  &:focus {
+	outline: none;
+  }
+}
+
+@mixin nav-link($color: #fff, $hover-color: rgba(#fff, 20%)) {
+  padding: .5rem;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: .85rem;
+  font-weight: 400;
+
+  @include link($color, rgba($hover-color, 20%), false, false);
+}

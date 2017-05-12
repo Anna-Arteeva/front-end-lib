@@ -1,0 +1,31 @@
+$hero-back-img: './../img/london-map.png';
+
+///////////
+// Screen
+
+.hero-home_screen {
+--width: calc(.46 * 100vw);
+
+@include  media-breakpoint-down(xs) {  --width: 80vw;  }
+@media (min-width: 1500px) {  --width: 850px;  }
+
+// hide the screen for mobiles
+//  @include media-breakpoint-down(xs) {
+//	display: none;
+//  }
+}
+
+//$screen-height: calc(var(--width) * (0.62 + 0.08 + 0.44 * 0.286) + .2rem);
+$screen-height-top:    calc(var(--width) * 0.62);
+$screen-height-bottom: calc(var(--width) * 0.08);
+$screen-height-stand:  calc(var(--width) * 0.44 * 0.286);
+$screen-width-stand:   calc(var(--width) * 0.44);
+$screen-frame:         calc(var(--width) * 0.04);
+$screen-border-radius: calc(var(--width) * 0.03);
+$screen-inside-map-bottom: calc(var(--width) * (-0.44 * 0.286 - 0.08 - 0.04) - .2rem);
+
+$screen-width-inside:  calc(var(--width) - 2 * #{$screen-frame});
+$screen-height-inside: calc(#{$screen-height-top} - 2 * #{$screen-frame});
+
+
+///////////

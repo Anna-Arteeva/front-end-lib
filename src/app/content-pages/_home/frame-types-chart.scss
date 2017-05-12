@@ -1,0 +1,77 @@
+.frame-types-chart {}
+
+.frame-types-chart_title {
+  fill: #fff;
+  font-size: 1.05REM;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.frame-types-chart_leaf {
+  fill: $brand-primary;
+}
+
+.frame-types-chart_leaf_circle {
+  fill: transparent;
+  position: relative;
+  z-index: 10;
+
+  &:hover, &:focus {
+	fill: #fff;
+	background-size: cover;
+	background-image: url('http://theinspirationroom.com/daily/design/2010/11/absolut_lemon_drop_bus_shelter.jpg');
+  }
+}
+
+.frame-types-chart_center_circle {
+  fill: $gray-back;
+}
+
+.frame-types-chart_leaf_link {
+  position: relative;
+  z-index: 10;
+}
+
+$frame-types-chart_leaf_width: 147px;
+
+.frame-types-chart_leaf_image {
+  width:  $frame-types-chart_leaf_width;
+  height: $frame-types-chart_leaf_width;
+  opacity: 0;
+
+  &:hover, &:focus {
+	opacity: 1;
+  }
+}
+
+#frame-types-chart_1 .frame-types-chart_leaf_image {
+  x: calc(357.4 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(82.1 -  (#{$frame-types-chart_leaf_width} / 2));
+}
+#frame-types-chart_2 .frame-types-chart_leaf_image {
+  x: calc(195.5 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(82.2 -  (#{$frame-types-chart_leaf_width} / 2));
+}
+#frame-types-chart_3 .frame-types-chart_leaf_image {
+  x: calc(80.4 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(197.1 -  (#{$frame-types-chart_leaf_width} / 2));
+}
+#frame-types-chart_4 .frame-types-chart_leaf_image {
+  x: calc(79.7 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(359 -  (#{$frame-types-chart_leaf_width} / 2));
+}
+#frame-types-chart_5 .frame-types-chart_leaf_image {
+  x: calc(195 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(473.9 -  (#{$frame-types-chart_leaf_width} / 2));
+}
+#frame-types-chart_6 .frame-types-chart_leaf_image {
+  x: calc(358.1 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(473.9 -  (#{$frame-types-chart_leaf_width} / 2));
+}
+#frame-types-chart_7 .frame-types-chart_leaf_image {
+  x: calc(276 - (#{$frame-types-chart_leaf_width} / 2));
+  y: calc(278 -  (#{$frame-types-chart_leaf_width} / 2));
+}

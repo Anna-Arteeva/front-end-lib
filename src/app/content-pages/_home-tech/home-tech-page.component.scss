@@ -1,0 +1,23 @@
+@import "theme/variables";
+
+@import "base/mixins";
+@import "base/images/_images";
+@import "base/_layout/nav/top-nav__hero";
+
+@import "app/content-pages/content-base";
+@import "../_home/_var-home";
+
+@import "hero-tech";
+
+.home-tech_integrations_logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+
+  img {
+    max-height: 100%;
+    max-width: 150px;
+    mix-blend-mode: multiply;
+    will-change: opacity;
+  }
+}

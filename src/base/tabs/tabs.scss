@@ -1,0 +1,54 @@
+
+.tabs_nav {
+  white-space: nowrap;
+  border-bottom: 1px solid $gray-outline-alpha;
+
+
+  > * {
+    &:not(:last-of-type) {
+      margin-right: .5rem;
+    }
+    &:not(:first-of-type) {
+      margin-left: .5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-left: .1rem;
+      margin-right: .1rem;
+    }
+  }
+}
+
+.tabs_nav_link {
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+  padding: .5rem;
+  color: $gray-base;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: -1px;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &:checked {
+	text-decoration: none;
+	border-bottom-color: $brand-primary;
+	color: $brand-primary;
+	position: relative;
+	z-index: 10;
+  }
+}
+
+// Pure css intaractive abs
+
+.tab-content,
+.tab-input {
+  display: none;
+}
+
+.tab-input:checked + .tab-content {
+  display: block;
+}

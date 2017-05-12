@@ -1,0 +1,48 @@
+<header class="top-nav">
+     <div class="top-nav_left">
+          <div class="logo-svg_wrapper">
+               <img class="logo-svg" src="./../../../app/content-pages/img/signkick-logo.svg" alt="Signkick">
+          </div>
+     </div>
+
+     <div class="top-nav_right">
+
+          <div class="hidden-sm-down m-r-0_5">
+               <a [routerLink]="['/tech']" class="top-nav_link">For media owners</a>
+               <a [routerLink]="['/']" fragment="features" class="top-nav_link">How it works</a>
+               <a [routerLink]="['/']" fragment="ad-spaces" class="top-nav_link">Ad sizes</a>
+               <a href="/blog/" class="top-nav_link">Blog</a>
+               <a href="/faq/" class="top-nav_link">FAQ</a>
+          </div>
+
+          <div class="hidden-xs-down">
+               <a class="btn top-nav_btn" href="./search">
+                    Sign up / Log in
+               </a>
+          </div>
+
+          <input class="d-none hamburger_checkbox" type="checkbox" id="hamburger" />
+          <label for="hamburger" class="top-nav_hamburger hamburger">
+               <hr class="hamburger_line hamburger_line_1" />
+               <hr class="hamburger_line hamburger_line_2" />
+               <hr class="hamburger_line hamburger_line_3" />
+          </label>
+
+
+          <div class="side-nav">
+               <div class="side-nav_content">
+                    <a class="side-nav_link" href="./">Signkick Media</a>
+                    <a class="side-nav_link" href="./tech">Signkick Tech</a>
+                    <a class="side-nav_link" href="./policy">Privacy Policy</a>
+                    <a class="side-nav_link" href="./terms">Terms and Conditions</a>
+                    <a class="side-nav_link" href="./search">Search Advertising Spaces</a>
+                    <a class="side-nav_link" href="./blog/">Blog</a>
+                    <a class="side-nav_link" href="./faq/">FAQ</a>
+
+                    <a class="btn btn-outline-white btn-block text-uppercase m-y-2" href="./search">
+                         Sign up / Log in
+                    </a>
+               </div>
+          </div>
+     </div>
+</header>

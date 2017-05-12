@@ -1,0 +1,89 @@
+// custom column widths
+
+// 1. Percentage
+// Responsive persentage setting (add more widths if you need)
+
+[class^="grid-col"] {
+  flex-grow: 0;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+
+    .grid-col-10per-#{$breakpoint} {
+      flex-basis: 10%;
+    }
+
+    .grid-col-30per-#{$breakpoint} {
+      flex-basis: 30%;
+    }
+
+    .grid-col-50per-#{$breakpoint} {
+      flex-basis: 50%;
+    }
+
+    .grid-col-70per-#{$breakpoint} {
+      flex-basis: 70%;
+    }
+
+    .grid-col-60per-#{$breakpoint} {
+      flex-basis: 60%;
+    }
+
+    [class*="-gap"] {
+      > .grid-col-30per-#{$breakpoint} {
+        flex-basis: calc(30% - 2.5rem);
+      }
+    }
+
+  }
+}
+
+// 1. Fixed width
+// Specify column width (before reaching breakpont)
+
+.grid-col-20rem {
+  flex-basis: 20rem
+}
+
+.grid-col-30rem {
+  flex-basis: 30rem
+}
+
+.grid-col-50rem {
+  flex-basis: 50rem
+}
+
+.grid-col-100rem {
+  flex-basis: 100rem
+}
+
+// Example.
+// Let’s create a responsive grid with 4 columns, one custom and 3 equal sized.
+// 1. The grid would break on small devises, so each column would take 100% of the available width. Therefore we can use default class for that <code>grid-sm</code>.
+// 2. On large devices the first column would take 50% of the space, but not less then 500px. So we make a custom class grid-col__custom with breakpoint on lg. Add <code>flex-grow: 0;</code> to forbid the column to take more space, then 50%
+// 3. On medium devices the first column would take 100% of the space, while other columns move to the next row and take the equal widths there. For that we add <code>flex-basis: 100%;</code> to .grid-col__custom
+//
+//.grid__custom {
+//  @include media-breakpoint-down(md) {
+//    flex-wrap: wrap;
+//  }
+//}
+//
+//.grid-col__custom {
+//  flex-basis: 100%;
+//
+//  @include media-breakpoint-up(lg) {
+//    flex-basis: 50%;
+//    flex-grow: 0;
+//    min-width: 500px;
+//  }
+//}
+//
+// HTML for this
+//<div class="grid-sm grid__custom">
+//  <div class="grid-col__custom">Custom column</div>
+//  <div>2</div>
+//  <div>3</div>
+//  <div>4</div>
+//</div>

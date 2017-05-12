@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="main.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100, 200, 300,300i,400,400i,500,500i" rel="stylesheet">
+</head>
+<body>
+<section class="block-base">
+	<h5 class="subtitle">UI elements</h5>
+	<h3 class="strong m-b-3">Forms and input groups</h3>
+
+	<div class="form-group ui-form">
+		<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+		<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+	</div>
+
+
+	<div class="form-group ui-form active m-t-1">
+		<select class="form-control ui-form_input ui-form_input__select" id="exampleSelect1">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<label class="ui-form_label" for="exampleSelect1">Example select UI form</label>
+	</div>
+
+	<div class="form-group ui-form active">
+		<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+		<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+	</div>
+
+	<div class="input-group form-group ui-form_group">
+		<div class="ui-form flex-grow-1">
+			<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+			<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+		</div>
+		<button class="btn-primary  input-group-btn">Button</button>
+	</div>
+
+	<div class="input-group form-group ui-form_group">
+		<span class="input-group-addon" id="basic-addon1">@</span>
+		<div class="ui-form flex-grow-1">
+			<input type="email" class="form-control ui-form_input active" id="exampleInputEmail1" aria-describedby="emailHelp">
+			<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+		</div>
+	</div>
+
+	<div class="input-group">
+		<div class="input-group-btn dropdown">
+			<input class="dropdown-checkbox" type="checkbox" id="dropdown-id">
+			<label class="btn btn-outline dropdown-toggle" for="dropdown-id">
+				Action
+			</label>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+				<div role="separator" class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Separated link</a>
+			</div>
+		</div>
+		<input type="text" class="form-control" aria-label="Text input with dropdown button">
+
+
+		<div class="input-group-btn dropdown">
+			<input class="dropdown-checkbox" type="checkbox" id="dropdown-2">
+			<label class="btn btn-outline dropdown-toggle" for="dropdown-2">
+				Action
+			</label>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+				<div role="separator" class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Separated link</a>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="form-group m-t-1">
+		<label for="exampleSelect1">Example select</label>
+		<select class="form-control" id="exampleSelect1">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+	</div>
+
+	<div class="d-inline-block m-r-2">
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input">
+			<span class="custom-control-indicator"></span>
+			<span class="custom-control-description">Check this custom checkbox</span>
+		</label>
+	</div>
+
+	<div class="d-inline-block">
+		<label class="custom-control custom-radio" for="radio2">
+			<input id="radio2" name="radio" type="radio" class="custom-control-input">
+			<span class="custom-control-indicator"></span>
+			<span class="custom-control-description">Or toggle this other custom radio</span>
+		</label>
+	</div>
+
+
+	<section>
+		<H3 class="m-t-3 m-b-2">Validation</H3>
+		<div class="form-group has-success">
+			<div class=" ui-form active">
+				<input type="text" class="form-control form-control-success ui-form_input" id="inputSuccess1">
+				<label class="ui-form_label" for="exampleInputEmail1">Success! You've done it.</label>
+			</div>
+		</div>
+
+		<div class="form-group has-warning">
+			<div class=" ui-form active">
+				<input type="text" class="form-control form-control-success ui-form_input" id="inputSuccess1">
+				<label class="ui-form_label" for="exampleInputEmail1">Shucks, check the formatting of that and try again.</label>
+			</div>
+		</div>
+
+		<div class="form-group has-danger ">
+			<div class="ui-form active ">
+				<input type="text" class="form-control form-control-success ui-form_input" id="inputSuccess1">
+				<label class="ui-form_label" for="exampleInputEmail1">Sorry, that username's taken. Try another?</label>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<H3 class="m-t-3 m-b-2"> Different types of inputs inner label</H3>
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input  type="text" value="Artisanal kale" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1" >Email address</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1" type="search" value="How do I shoot web" >Email address</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="email" value="bootstrap@example.com" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1" >Email address</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="url" value="http://getbootstrap.com" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1" >URL</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="tel" value="1-(555)-555-5555" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1" >Phone</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="password" value="hunter2" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Password</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="number" value="42" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Number</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="datetime-local" value="2011-08-19T13:45:00" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Date and time</label>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input type="date" value="2011-08-19"  class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Date</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input  type="month" value="2011-08"  class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Month</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input  type="week" value="2011-W33" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Week</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="form-group ui-form active">
+				<input  type="time" value="13:45:00" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<label class="ui-form_label" for="exampleInputEmail1">Time</label>
+			</div>
+		</div>
+
+	</section>
+
+	<label class="custom-file">
+		<input type="file" id="file" class="custom-file-input">
+		<span class="custom-file-control"></span>
+	</label>
+</section>
+
+<section class="block-base bg-inverse">
+	<h5 class="subtitle">UI elements</h5>
+	<h3 class="strong m-b-3">Forms and input groups</h3>
+
+	<div class="form-group ui-form">
+		<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+		<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+	</div>
+
+	<div class="form-group ui-form active">
+		<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+		<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+	</div>
+
+	<div class="input-group form-group ui-form_group">
+		<div class="ui-form flex-grow-1">
+			<input type="email" class="form-control ui-form_input" id="exampleInputEmail1" aria-describedby="emailHelp">
+			<label class="ui-form_label" for="exampleInputEmail1">Email address</label>
+		</div>
+		<button class="btn-primary  input-group-btn">Button</button>
+	</div>
+
+	<div class="form-group ui-form active m-t-1">
+		<select class="form-control ui-form_input ui-form_input__select" id="exampleSelect1">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<label class="ui-form_label" for="exampleSelect1">Example select UI form</label>
+	</div>
+
+	<div class="d-inline-block m-r-2">
+		<label class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input">
+			<span class="custom-control-indicator"></span>
+			<span class="custom-control-description">Check this custom checkbox</span>
+		</label>
+	</div>
+
+	<div class="d-inline-block">
+		<label class="custom-control custom-radio" for="radio3">
+			<input id="radio3" name="radio" type="radio" class="custom-control-input">
+			<span class="custom-control-indicator"></span>
+			<span class="custom-control-description">Or toggle this other custom radio</span>
+		</label>
+	</div>
+</section>
+</body>
+</html>

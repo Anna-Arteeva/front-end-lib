@@ -1,0 +1,37 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  @include make-container-max-widths();
+}
+
+.container-xs {
+  @include make-container($container-max-width-sm);
+}
+
+.container-md {
+  @include make-container($container-max-width-md);
+}
+
+.container-lg {
+  @include make-container($container-max-width-xl);
+}
+
+.half-container {
+  @include media-breakpoint-up(lg) {
+    @include make-container($container-max-width-xl / 2.2);
+  }
+}
+
+.half-container__left {
+  @include media-breakpoint-up(lg) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.half-container__right {
+  @include media-breakpoint-up(lg) {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}

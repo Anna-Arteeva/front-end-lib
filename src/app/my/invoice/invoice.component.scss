@@ -1,0 +1,151 @@
+$A4-width: 21cm;
+$A4-height: 29.7cm;
+
+@page {
+  margin: 1cm;
+  padding: 0;
+}
+
+@media screen {
+  .invoice_wrapper {
+	@include gradient-directional( $brand-inverse-light, $brand-inverse, 125deg); //comment to have light gray background
+	background-color: $gray-outline;
+	min-height: 100vh;
+	padding: 2rem 1.5rem;
+  }
+
+  .invoice_container {
+	width: $A4-width;
+	margin: auto;
+  }
+
+  .invoice {
+	box-shadow: .3rem .3rem 1.2rem rgba($brand-inverse, 0.3);
+	border-radius: $border-radius;
+	max-width: $A4-width;
+	min-height: $A4-height;
+	background-color: #fff;
+	padding: 1cm;
+  }
+
+  .invoice_header {
+	min-height: 5cm;
+  }
+}
+
+@media print {
+  .hidden-print {
+	display: none !important;
+  }
+}
+
+.invoice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 11pt;
+
+  td, th, h6 {
+	font-size: 11pt;
+  }
+
+  thead th,
+  td {
+	&:first-of-type {
+	  padding-left: 0;
+	}
+
+	&:last-of-type {
+	  padding-right: 0;
+	}
+  }
+}
+
+
+// text styles
+.invoice-title {
+  font-weight: 400;
+  color: $brand-primary;
+  font-size: 10pt;
+  padding-right: .2cm !important;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.invoice-subtitle {
+  font-weight: 400;
+  padding-right: .2cm;
+  white-space: nowrap;
+}
+
+
+// Header
+.invoice_header {
+  padding-bottom: .2cm;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  color: $gray-base-light;
+  border-bottom: 3px double $gray-outline;
+
+  font-size: 9.5pt;
+
+  td {
+	font-size: 9.5pt;
+  }
+}
+
+.invoice_header_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.invoice_header_right {
+  max-width: 50%;
+}
+
+
+// content
+.invoice_content {
+  flex-grow: 1;
+  padding: 1cm 0;
+//  background-color: $gray-back;
+}
+
+.invoice_order-item-list {
+  min-width: inherit !important;
+
+  thead th {
+	background: transparent;
+	border-top: 0;
+  }
+
+  td {
+	border-top-style: dashed;
+  }
+}
+
+.invoice_total {
+  max-width: 50%;
+  margin-top: .7cm;
+  margin-left: auto;
+}
+
+.invoice_grand-total {
+  font-size: 12pt;
+}
+
+
+// footer
+.invoice_footer {
+  border-top: 1px solid $gray-outline;
+  padding-top: .4cm;
+  font-size: 9.5pt;
+  display: flex;
+  justify-content: space-between;
+  color: $gray-base-light;
+  float: footnote;
+}

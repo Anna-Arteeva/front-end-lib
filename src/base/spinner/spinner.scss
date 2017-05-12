@@ -1,0 +1,54 @@
+// Original http://codepen.io/alexerlandsson/pen/yOVdvj
+
+//<div class="spinner">
+//<div class="spinner-dot"></div>
+//<div class="spinner-dot"></div>
+//<div class="spinner-dot"></div>
+//</div>
+
+$spinner-animation-speed: 1.8s;
+$spinner-dot-size: 10px;
+
+@mixin spinner-animation($delay: 0ms) {
+  animation: fx $spinner-animation-speed ease infinite $delay;
+}
+
+@keyframes fx {
+  50% {
+	transform: scale(1);
+	opacity: 1;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+
+
+.spinner {
+ // transform: translate(-50%, -50%);
+}
+
+.spinner-primary .spinner-dot {
+  border-color: $brand-primary;
+}
+
+.spinner-dot {
+  display: inline-block;
+  vertical-align: middle;
+  width: $spinner-dot-size;
+  height: $spinner-dot-size;
+  border: ($spinner-dot-size / 5) solid white;
+  border-radius: 3px;
+  margin: 0 $spinner-dot-size / 3;
+  margin-bottom: .15em;
+  transform: scale(0);
+  @include spinner-animation();
+
+  &:nth-child(2) {
+	@include spinner-animation($spinner-animation-speed * 0.3);
+  }
+
+  &:nth-child(3) {
+	@include spinner-animation($spinner-animation-speed * 0.6);
+  }
+}

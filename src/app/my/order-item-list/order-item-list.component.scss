@@ -1,0 +1,24 @@
+@import 'theme/variables';
+@import 'base/mixins';
+
+// use nesting because of higher specificity of default .table classes (otherwise use !important to overwrite styles)
+
+.order-item-list {
+  min-width: 900px;
+
+  .order-item-list_icon {
+	width: 1.5rem;
+  }
+
+  .order-item-list_subtotal {
+	padding-bottom: 1.2rem;
+
+	&:before {
+	  content: '';
+	  width: 100%;
+	  display: block;
+	  border-top: 1px dashed $gray-outline;
+	  padding: .6rem;
+	}
+  }
+}

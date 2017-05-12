@@ -1,0 +1,54 @@
+$top-nav__hero-height: 4.5rem;
+
+@mixin top-nav__hero {
+  background: transparent !important;
+  height: $top-nav__hero-height;
+
+  .top-nav_middle {
+	display: none;
+  }
+}
+
+.top-nav__hero_light-back {
+  .top-nav {
+	@include top-nav__hero;
+  }
+
+  .top-nav_link {
+	@include link($gray-base, $brand-primary, false, false);
+  }
+
+  .hamburger_line {
+	background-color: $gray-base;
+  }
+
+  .logo-svg {
+    fill: $brand-primary;
+  }
+
+//  .icon {
+//	@include icon-color($gray-base);
+//  }
+//
+//  .line-icon {
+//	@include line-icon-color($gray-base);
+//  }
+
+  .top-nav_btn {
+	@include button-outline-variant($btn-primary-bg);
+  }
+}
+
+.top-nav__hero_dark-back {
+  .top-nav {
+	@include top-nav__hero;
+  }
+
+  .top-nav_btn {
+	@include button-outline-variant($btn-primary-bg);
+  }
+
+  .logo-svg {
+    fill: $brand-primary;
+  }
+}

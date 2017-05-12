@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
+
+@mixin code {
+  border-radius: $border-radius;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+}
+
+@mixin block-code-inline {
+  padding: .3rem .5rem;
+  font-size: .8rem;
+
+  p {
+    margin: .2rem 0;
+  }
+  h6 {
+    font-size: inherit;
+    margin-top: .5em;
+  }
+}
+
+code, .code {
+  @include code;
+  background-color: $gray-back;
+  padding: .1em .4em .2em;
+  font-size: .9em;
+}
+
+.block-code {
+  @include code;
+  @include block-code-inline;
+  background-color: $gray-back;
+  color: $gray-muted;
+}
+
+.block-code_inverse {
+  @include code;
+  @include block-code-inline;
+  background-color: rgba(#fff, .1);
+  color: rgba(#fff, .7);
+}
+
+.block-code-large {
+  @include code;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: $gray-back;
+  color: $gray-base;
+  display: block;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.code-comment {
+  color: $gray-muted;
+}

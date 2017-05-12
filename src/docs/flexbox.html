@@ -1,0 +1,379 @@
+<nav class="docs-sidebar">
+    <iframe src="./index.html" width="100%" height="100%" frameborder="0"></iframe>
+</nav>
+
+
+<div class="docs-content container-xl">
+    <h2 class="display-3 m-y-5">Flexbox utilities</h2>
+
+    <section id="Flexbox" class="m-y-5">
+        <p>
+            Flexbox is a great and flexible way to organise set of blocks and build complex responsive layouts.
+            Find here easy quick-to-use utilities for the most common cases.
+        </p>
+        <p>
+            Find out more about flexbox in <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">this
+            detailed flexbox guide</a>
+        </p>
+
+        <h6 class="m-t-3">Responsive flexbox shortcut</h6>
+
+        <div class="block-code m-t-1 d-inline-block">
+            class: flex (all dimentions)<br>
+            responsive: flex-xs, flex-sm, flex-md, flex-lg, flex-xl<br>
+        </div>
+        <h6 class="subtitle m-t-2 text-sm">Example</h6>
+        <p>flexbox for medium (md) and bigger screen size <code>flex-md</code> (resize the browser window to see the
+            difference)</p>
+        <div class="p-a-1 bg-gray flex-md">
+            <div class="p-a-0_5 bg-success">1</div>
+            <div class="p-a-0_5 bg-danger"> 2</div>
+            <div class="p-a-0_5 bg-warning"><span class="display-1"> 3</span></div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <code class="block-code-large m-b-0" data-lang="html">
+            <h6 class="subtitle text-sm">Example code</h6>
+            &lt;div class="flex-md"><br>
+            &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+
+        <h6 class="m-t-3">Inline flexbox</h6>
+        <div class="block-code m-t-1 d-inline-block">
+            class="inline-flex"<br>
+        </div>
+        <h6 class="subtitle m-t-2 text-sm">Example</h6>
+        <div class="p-a-1 bg-gray inline-flex">
+            <div class="p-a-0_5 bg-success">1</div>
+            <div class="p-a-0_5 bg-danger"> 2</div>
+            <div class="p-a-0_5 bg-warning">3</div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <code class="block-code-large m-t-0_5" data-lang="html">
+            &lt;div class="inline-flex"><br>
+            &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+
+        <h5 class="m-t-3">Flex direction</h5>
+        <div>
+            <h6>Row and column. Responsive.</h6>
+            <div class="block-code m-t-1 d-inline-block">
+                class="flex-row-xs" (all devices)<br>
+                alternative: flex-row-xs, flex-row-sm, flex-row-md, flex-row-lg, flex-row-xl<br>
+            </div>
+
+            <div class="block-code m-t-1 d-inline-block">
+                class="flex-column-xs" (all devices)<br>
+                alternative: flex-column-xs, flex-column-sm, flex-column-md, flex-column-lg, flex-column-xl<br>
+            </div>
+
+            <h6 class="subtitle m-t-2 text-sm">Example row (for medium and larger)</h6>
+            <div class="p-a-1 bg-gray flex-row-md">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+                &lt;div class="flex-row-md"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+
+            <h6 class="subtitle text-sm m-t-3">Example column (for medium and larger)</h6>
+            <div class="p-a-1 bg-gray flex-column-md">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+                &lt;div class="flex-row-md"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+
+            <h6 class="subtitle text-sm m-t-3">Example of combination: column on large (lg) devices and row on medium
+                and standart non-flex on small ones</h6>
+            <div class="p-a-1 bg-gray flex-row-md flex-column-lg">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+                &lt;div class="flex-row-md flex-column-lg"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+
+
+            <h6 class="m-t-3">Row-reverse</h6>
+            <p>
+                This one must be used in the combination with <code>.flex</code> class
+            </p>
+            <div class="block-code m-t-0_5 m-b-2 d-inline-block">
+                class="flex flex-row-reverse"
+            </div>
+            <div class="block-code m-t-0_5 m-b-2 d-inline-block">
+                class="flex flex-column-reverse"
+            </div>
+            <h6 class="subtitle m-t-2 text-sm">Example row-reverse</h6>
+            <div class="p-a-1 bg-gray flex flex-row-reverse">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+
+                &lt;div class="flex flex-row-reverse"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+
+            <h6 class="subtitle text-sm m-t-3">Example column-reverse</h6>
+            <div class="p-a-1 bg-gray flex flex-column-reverse">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+                &lt;div class="flex flex-column-reverse"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+        </div>
+
+
+        <h5 class="m-t-3">Wrap</h5>
+        <div>
+            <div class="block-code m-t-0_5 m-b-2 d-inline-block">
+                class="flex flex-wrap"<br>
+                alternative: flex-wrap-xs, flex-wrap-sm, flex-wrap-md, flex-wrap-lg, flex-wrap-xl<br>
+            </div>
+
+            <div class="block-code m-t-0_5 m-b-2 d-inline-block">
+                class="flex flex-nowrap"<br>
+                alternative: flex-nowrap-xs, flex-nowrap-sm, flex-nowrap-md, flex-nowrap-lg, flex-nowrap-xl<br>
+            </div>
+
+            <h6 class="subtitle text-sm">Example flex-wrap</h6>
+            <div class="p-a-1 bg-gray flex flex-wrap">
+                <div style="width: 40%" class="p-a-0_5 bg-success">1</div>
+                <div style="width: 45%" class="p-a-0_5 bg-danger"> 2</div>
+                <div style="width: 55%" class="p-a-0_5 bg-warning">3</div>
+                <div style="width: 50%" class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+                &lt;div class="flex flex flex-wrap"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+
+            <h6 class="subtitle text-sm m-t-3">Example flex-nowrap</h6>
+            <div class="p-a-1 bg-gray flex flex-nowrap">
+                <div style="width: 40%" class="p-a-0_5 bg-success">1</div>
+                <div style="width: 45%" class="p-a-0_5 bg-danger"> 2</div>
+                <div style="width: 55%" class="p-a-0_5 bg-warning">3</div>
+                <div style="width: 50%" class="p-a-0_5 bg-inverse">4</div>
+            </div>
+            <code class="block-code-large m-t-0_5" data-lang="html">
+                &lt;div class="flex flex flex-nowrap"><br>
+                &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+                &nbsp; &nbsp; &lt;div class="display-1">3&lt;/div><br>
+                &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+                &lt;/div>
+            </code>
+        </div>
+
+        <h5 class="m-t-3">Justify-content</h5>
+        <div>
+            <div class="block-code m-t-0_5 d-inline-block">
+                class="flex flex-end"
+            </div>
+            <div class="p-a-1 bg-gray flex flex-end">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+
+
+            <div class="block-code m-t-2 d-inline-block">
+                class="flex flex-space-between"
+            </div>
+            <div class="p-a-1 bg-gray flex flex-space-between ">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+
+            <div class="block-code m-t-2 d-inline-block">
+                class="flex flex-space-around"
+            </div>
+            <div class="p-a-1 bg-gray flex flex-space-around">
+                <div class="p-a-0_5 bg-success">1</div>
+                <div class="p-a-0_5 bg-danger"> 2</div>
+                <div class="p-a-0_5 bg-warning">3</div>
+                <div class="p-a-0_5 bg-inverse">4</div>
+            </div>
+
+
+            <div class="block-code m-t-2 d-inline-block">
+                class="flex flex-align-end"
+            </div>
+            <div class="p-a-1 bg-gray flex flex-align-end">
+                <div style="min-height: 30px" class="p-a-0_5 bg-success">1</div>
+                <div style="min-height: 40px" class="p-a-0_5 bg-danger"> 2</div>
+                <div style="min-height: 50px" class="p-a-0_5 bg-warning">3</div>
+                <div style="min-height: 60px" class="p-a-0_5 bg-inverse">4</div>
+            </div>
+
+
+            <div class="block-code m-t-2 d-inline-block">
+                class="flex flex-align-center"
+            </div>
+            <div class="p-a-1 bg-gray flex flex-align-center">
+                <div style="min-height: 30px" class="p-a-0_5 bg-success">1</div>
+                <div style="min-height: 40px" class="p-a-0_5 bg-danger"> 2</div>
+                <div style="min-height: 50px" class="p-a-0_5 bg-warning">3</div>
+                <div style="min-height: 60px" class="p-a-0_5 bg-inverse">4</div>
+            </div>
+
+
+            <div class="block-code m-t-2 d-inline-block">
+                class="flex flex-align-stretch"
+            </div>
+            <div class="p-a-1 bg-gray flex flex-align-stretch">
+                <div style="min-height: 30px" class="p-a-0_5 bg-success">1</div>
+                <div style="min-height: 40px" class="p-a-0_5 bg-danger"> 2</div>
+                <div style="min-height: 50px" class="p-a-0_5 bg-warning">3</div>
+                <div style="min-height: 60px" class="p-a-0_5 bg-inverse">4</div>
+            </div>
+        </div>
+
+        <h5 class="m-t-3">Alignment (cross axis)</h5>
+        <div>
+            <div class="block-code m-t-0_5 m-b-2 d-inline-block">
+                class="flex-self-start" (applied to a child element)<br>
+                alternative: flex-self-end, flex-self-center, flex-self-stretch
+            </div>
+            <div class="p-a-1 bg-gray flex flex-align-end">
+                <div style="min-height: 30px" class="p-a-0_5 bg-success">1</div>
+                <div style="min-height: 40px" class="p-a-0_5 bg-danger flex-self-start"> 2</div>
+                <div style="min-height: 50px" class="p-a-0_5 bg-warning">3</div>
+                <div style="min-height: 60px" class="p-a-0_5 bg-inverse">4</div>
+            </div>
+        </div>
+
+        <h5 class="m-t-3">Grow</h5>
+        <div>
+
+            <div class="block-code m-t-0_5 m-b-2 d-inline-block">
+                class: flex-grow-0, flex-grow-1
+                alternative: flex-grow-1-{breakpoint}-up, flex-grow-1-{breakpoint}-down
+            </div>
+
+            <div class="p-a-1 bg-gray flex">
+                <div class="p-a-0_5 bg-success flex-grow-0">
+                    <div class="block-code_inverse m-t-0_5 m-b-2 d-inline-block">
+                        class="flex flex-grow-0"
+                    </div>
+                </div>
+                <div class="p-a-0_5 bg-danger flex-grow-1">
+                    <div class="block-code_inverse m-t-0_5 m-b-2 d-inline-block">
+                        class="flex flex-grow-1"
+                    </div>
+                </div>
+                <div class="p-a-0_5 bg-warning flex-grow-1">
+                    <div class="block-code_inverse m-t-0_5 m-b-2 d-inline-block">
+                        class="flex flex-grow-1"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h5 class="m-t-3">Vertically centered row of blocks (can be user for logo preview for example)</h5>
+        <div class="block-code m-t-2 d-inline-block">
+            class="flex-centered-range"
+        </div>
+        <div style="height: 150px" class="p-a-1 bg-gray flex-centered-range">
+            <div style="height: 30px" class="p-a-0_5 bg-success">1</div>
+            <div style="height: 40px" class="p-a-0_5 bg-danger"> 2</div>
+            <div style="height: 50px" class="p-a-0_5 bg-warning">3</div>
+            <div style="height: 60px" class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <h5 class="m-t-3">Position children blocks in the middle of the parent block</h5>
+
+        <div class="block-code m-t-2 d-inline-block">
+            class="flex-vertical-middle"
+        </div>
+        <div style="height: 300px" class="p-a-1 bg-gray flex-vertical-middle">
+            <div style="width: 30px" class="p-a-0_5 bg-success">1</div>
+            <div style="width: 40px" class="p-a-0_5 bg-danger"> 2</div>
+            <div style="width: 50px" class="p-a-0_5 bg-warning">3</div>
+            <div style="width: 60px" class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+
+        <h5 class="m-t-3">Position children blocks on the bottom of the parent block</h5>
+        <div class="block-code m-t-2 d-inline-block">
+            class="flex-vertical-bottom"
+        </div>
+        <div style="height: 300px" class="p-a-1 bg-gray flex-vertical-bottom">
+            <div style="width: 30px" class="p-a-0_5 bg-success">1</div>
+            <div style="width: 40px" class="p-a-0_5 bg-danger"> 2</div>
+            <div style="width: 50px" class="p-a-0_5 bg-warning">3</div>
+            <div style="width: 60px" class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+
+        <h5 class="m-t-3">Position children blocks on the bottom of the parent block</h5>
+
+        <div class="block-code m-t-2 d-inline-block">
+            class="flex-vertical-bottom"
+        </div>
+        <div style="height: 150px" class="p-a-1 bg-gray flex-space-between-middle">
+            <div style="height: 30px" class="p-a-0_5 bg-success">1</div>
+            <div style="height: 40px" class="p-a-0_5 bg-danger"> 2</div>
+            <div style="height: 50px" class="p-a-0_5 bg-warning">3</div>
+            <div style="height: 60px" class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+    </section>
+</div>

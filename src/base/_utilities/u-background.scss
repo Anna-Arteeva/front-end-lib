@@ -1,0 +1,63 @@
+//
+// Contextual backgrounds
+//
+
+.bg-gray, .back-gray {
+  background-color: $gray-back;
+}
+
+.bg-gray-md-down {
+  @include media-breakpoint-down(md) {
+    background-color: $gray-back;
+  }
+}
+
+.back-gray-dark {            background-color: $gray-dark;            }
+.back-gray-base {            background-color: $gray-base;            }
+.back-gray-base-light {      background-color: $gray-base-light;            }
+.back-gray-muted {           background-color: $gray-muted;            }
+.back-gray-outline {         background-color: $gray-outline;            }
+.back-gray-outline-alpha {   background-color: $gray-outline-alpha;            }
+
+.back-primary {              background-color: $brand-primary;  }
+.back-primary-dark {         background-color: $brand-primary-dark;  }
+.back-primary-light {        background-color: $brand-primary-light;  }
+.back-success {              background-color: $brand-success;  }
+.back-info    {              background-color: $brand-info;  }
+.back-warning {              background-color: $brand-warning;  }
+.back-danger  {              background-color: $brand-danger;  }
+.back-inverse {              background-color: $brand-inverse;  }
+.back-inverse-light {        background-color: $brand-inverse-light;  }
+
+
+.bg-primary {    @include bg-variant($brand-primary);  }
+.bg-success {    @include bg-variant($brand-success);  }
+.bg-info    {    @include bg-variant($brand-info);  }
+.bg-warning {    @include bg-variant($brand-warning);  }
+.bg-danger  {    @include bg-variant($brand-danger);  }
+.bg-inverse {    @include bg-variant($brand-inverse,$brand-inverse-light);  }
+
+.bg-image-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-darken {
+  position: relative;
+
+  div {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: rgba($brand-inverse, .7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}

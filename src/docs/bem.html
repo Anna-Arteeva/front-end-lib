@@ -1,0 +1,132 @@
+<nav class="docs-sidebar">
+    <iframe src="./index.html" width="100%" height="100%" frameborder="0"></iframe>
+</nav>
+
+
+<div class="docs-content container-xl">
+    <!--BEM-->
+    <h2 class="display-3 m-y-5">
+        BEM principals
+    </h2>
+
+    <section id="bem" class="m-y-5">
+
+        <p class="p-lead">
+            Currenly <strong>BEM</strong> is one of the most used frontend methodologies.
+
+            Check out the
+            <a href="https://en.bem.info/methodology/key-concepts/">official website</a>
+            for more information.
+        </p>
+
+        <h4>
+            Key concepts
+        </h4>
+        <p>
+            By BEM approach an application consists of re-usable <b>Blocks</b>, that includes <b>Elements</b> and both
+            of them can have <b>Modifiers</b> to change the appearence of blocks or elements without creating a new
+            entity.
+        </p>
+
+        <h5 class="m-t-3">Block</h5>
+        <p>
+            – a logically and functionally independent page component.
+        </p>
+        <p>
+            Blocks can be nested inside any other blocks.
+
+        </p>
+        <p>
+            For example, a head block can include a logo (logo), a search form (search), and an authorization block
+            (auth).
+        </p>
+
+        <img src="https://en.bem.info/kFetIbKxQdABHhUecbic45Il0Bg.png" alt="BEM block" class="img-fluid m-y-2">
+
+        <p>
+            Blocks can be moved around on a page, moved between pages or projects.
+            The implementation of blocks as independent entities makes it possible to change
+            their position on the page and ensures their proper functioning and appearance.
+        </p>
+
+        <img src="https://en.bem.info/0bbhZyhaBhRzqBh5nLYQEnFpDTk.png" alt="BEM block" class="img-fluid m-y-2">
+        <p>
+            ..and re-used
+        </p>
+
+        <img src="https://en.bem.info/VBlEdksG7XkL4DLPWe4rcYb5hGo.png" alt="BEM block" class="img-fluid m-y-2">
+
+        <h5 class="m-t-3">Element</h5>
+        <p>
+            – a constituent part of a block that can't be used outside of it.
+        </p>
+        <p>
+            For example, a menu item is not used outside of the context of a menu block, therefore it is an element.
+        </p>
+
+        <img src="https://en.bem.info/cPrdQL4EZZdhPIrcYOayygPBSm4.png" alt="BEM block" class="img-fluid m-y-2">
+
+
+        <h5 class="m-t-3">Modifier</h5>
+        <p>
+            – a BEM entity that defines the appearance and behavior of a block or an element.
+        </p>
+        <p>
+            The use of modifiers is optional.
+        </p>
+        <p>
+            For instance, the appearance of the menu block (menu) may change depending on a modifier that is used on it.
+        </p>
+
+        <img src="https://en.bem.info/WSU5nwZla7p44W2tdxiP371xx38.png" alt="BEM block" class="img-fluid m-y-2">
+
+        <p>
+            Modifiers can be changed in runtime (for example, as a reaction to a DOM event of the block), or via other
+            blocks.
+
+        </p>
+        <p>
+            For example, if the wrong credentials are entered when a user clicks the Sign In button (the 'click' DOM
+            event), the 'visible' modifier is set on a hidden block with error messages.
+        </p>
+
+        <h5 class="m-t-3">BEM tree</h5>
+        <p>
+            Let's consider an example of a DOM tree:
+        </p>
+
+        <div class="block-code-large">
+            <p>
+                header
+            </p>
+            <p class="p-l-2">
+                ├─logo
+            </p>
+            <p class="p-l-2">
+                └─search-form
+            </p>
+            <p class="p-l-3">
+                ├─input
+            </p>
+            <p class="p-l-3">
+                └─button
+            </p>
+            <p class="p-l-2">
+                └─lang-switcher
+            </p>
+            <p class="p-l-3">
+                └─lang-switcher__item
+            </p>
+            <p class="p-l-3 m-l-2">
+                └─lang-switcher__link
+            </p>
+            <p class="p-l-3">
+                └─lang-switcher__item lang-switcher__item--modifier
+            </p>
+            <p class="p-l-3 m-l-2">
+                └─lang-switcher__link
+            </p>
+        </div>
+
+    </section>
+</div>

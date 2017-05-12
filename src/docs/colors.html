@@ -1,0 +1,298 @@
+<nav class="docs-sidebar">
+    <iframe src="./index.html" width="100%" height="100%" frameborder="0"></iframe>
+</nav>
+
+
+<div class="docs-content container-xl">
+    <!--Colors-->
+    <h2 class="display-3 m-y-5">
+        Brand Colors
+    </h2>
+
+    <section id="colors" class="m-y-5">
+
+        <h5>Primary brand color</h5>
+        <div class="grid-xs-gap m-b-3 m-t-2">
+            <div class="flex-grow-1">
+                <div class="rounded p-a-2 back-primary"></div>
+                <p class="block-code m-t-0_5">
+                    $brand-primary
+                </p>
+            </div>
+            <div>
+                <div class="rounded p-a-2 back-primary-dark"></div>
+                <p class="block-code m-t-0_5">
+                    $brand-primary-dark
+                </p>
+            </div>
+
+            <div>
+                <div class="rounded p-a-2 back-primary-light"></div>
+                <p class="block-code m-t-0_5">
+                    $brand-primary-light
+                </p>
+            </div>
+
+            <div>
+                <div class="rounded p-a-2 bg-primary"></div>
+
+                <div class="block-code m-t-0_5">
+                    <h6>Gradient</h6>
+                    <p>
+                        class: bg-primary
+                    </p>
+                    <p>
+                        mixin: bg-variant($brand-primary);
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <h5>Text colors</h5>
+        <div class="grid-xs-gap m-b-3 m-t-1">
+
+            <div>
+                <p class="text-base">Base text</p>
+                <p class="text-sm">
+                    Default text color
+                </p>
+                <div class="rounded p-a-2 back-gray-base"></div>
+                <div class="block-code m-t-0_5">
+                    var: $gray-base
+                    <p>
+                        back class: back-gray-base
+                    </p>
+                    <p>
+                        text class: text-base
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-dark">Dark gray</p>
+                <p class="text-sm">
+                    Emphasize text blocks or headers
+                </p>
+                <div class="rounded p-a-2 back-gray-dark"></div>
+                <div class="block-code m-t-0_5">
+                    var: $gray-dark
+                    <p>
+                        back class: back-gray-dark
+                    </p>
+                    <p>
+                        text class: text-dark
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-light">Light gray</p>
+                <p class="text-sm">
+                    Light text color, can be used for footnotes, remarks etc.
+                </p>
+                <div class="rounded p-a-2 back-gray-muted"></div>
+                <div class="block-code m-t-0_5">
+                    var: $gray-base-light
+                    <p>
+                        back class: back-gray-light
+                    </p>
+                    <p>
+                        text class: text-light
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-muted">Muted text</p>
+                <p class="text-sm">Text color for disabled links, muted blocks ets</p>
+                <div class="rounded p-a-2 back-gray-muted"></div>
+                <div class="block-code m-t-0_5">
+                    var: $gray-muted
+                    <p>
+                        back class: back-gray-muted
+                    </p>
+                    <p>
+                        text class: text-muted
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <h5>Event colors</h5>
+        <div class="grid-xs-gap m-b-3 m-t-1">
+            <div>
+
+                <p class="text-success">Success text</p>
+                <div class="rounded p-a-2 back-success"></div>
+                <div class="block-code m-t-0_5">
+                    var: $brand-success
+                    <p>
+                        back class: back-success
+                    </p>
+                    <p>
+                        text class: text-success
+                    </p>
+
+                    <h6>Gradient</h6>
+                    <p>
+                        class: bg-success
+                    </p>
+                    <p>
+                        mixin: bg-variant($brand-success);
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="text-info">Info text</p>
+                <div class="rounded p-a-2 back-info"></div>
+                <div class="block-code m-t-0_5">
+                    var: $brand-info
+                    <p>
+                        back class: back-info
+                    </p>
+                    <p>
+                        text class: text-info
+                    </p>
+
+                    <h6>Gradient</h6>
+                    <p>
+                        class: bg-info
+                    </p>
+                    <p>
+                        mixin: bg-variant($brand-info);
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="text-warning">Warning text</p>
+                <div class="rounded p-a-2 back-warning"></div>
+
+                <div class="block-code m-t-0_5">
+                    var: $brand-warning
+                    <p>
+                        back class: back-warning
+                    </p>
+                    <p>
+                        text class: text-warning
+                    </p>
+
+                    <h6>Gradient</h6>
+                    <p>
+                        class: bg-warning
+                    </p>
+                    <p>
+                        mixin: bg-variant($brand-warning);
+                    </p>
+                </div>
+            </div>
+            <div>
+                <p class="text-danger">Danger/error text</p>
+                <div class="rounded p-a-2 back-danger"></div>
+                <div class="block-code m-t-0_5">
+                    var: $brand-danger
+                    <p>
+                        back class: back-danger
+                    </p>
+                    <p>
+                        text class: text-danger
+                    </p>
+
+                    <h6>Gradient</h6>
+                    <p>
+                        class: bg-danger
+                    </p>
+                    <p>
+                        mixin: bg-variant($brand-danger);
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <h5>Dark layout</h5>
+        <div class="grid-xs-gap m-b-3 m-t-1">
+            <div>
+                <div class="rounded p-a-2 back-inverse"></div>
+                <div class="block-code m-t-0_5">
+                    var: $brand-inverse
+                    <p>
+                        class: back-inverse
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="rounded p-a-2 back-inverse-light"></div>
+                <div class="block-code m-t-0_5">
+                    var: $brand-inverse-light
+                    <p>
+                        class: back-inverse-light
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="rounded p-a-2 bg-inverse"></div>
+                <div class="block-code m-t-0_5">
+                    <h6>Gradient</h6>
+                    <p>
+                        class: bg-inverse
+                    </p>
+                    <p>
+                        mixin: bg-variant($brand-inverse,$brand-inverse-light);
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <h5>Backgrounds and outlines</h5>
+        <div class="grid-xs-gap m-b-3 m-t-1">
+            <div>
+                <div class="rounded p-a-2 back-gray"></div>
+                <div class="block-code m-t-0_5">
+                    var: $gray-back
+                    <p>
+                        class: back-gray
+                    </p>
+                    <p class="text-primary">
+                        This shade should be used as a default light gray background
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="rounded p-a-2 back-gray-outline"></div>
+                <div class="block-code m-t-0_5">
+                    var: $gray-outline
+                    <p>
+                        class: back-gray-outline
+                    </p>
+                    <p class="text-primary">
+                        Borders and outlines, and default button color, can be used as a background color in some cases
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-inverse rounded">
+                <div class="rounded p-a-2 back-gray-outline-alpha"></div>
+                <div class="block-code_inverse m-t-0_5">
+                    var: $gray-outline-alpha
+                    <p>
+                        class: back-gray-outline-alpha
+                    </p>
+                    <p class="text-primary">
+                        Semi-transparent outline color that can be alternatively used on dark or colorful backgrounds
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</div>

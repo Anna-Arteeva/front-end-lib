@@ -1,0 +1,34 @@
+.hero-tech {
+  position: relative; // for :before (background) positioning
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  margin-top: - $top-nav__hero-height;
+  padding-top: $top-nav__hero-height;
+
+  color: white;
+
+
+  @include media-breakpoint-down(sm) {
+	min-height: 100vh;
+  }
+
+  > * {
+	position: relative;
+	z-index: 1;
+  }
+
+  &:before {
+	@include hero-back($hero-back-img);
+	filter: blur(1px);
+	opacity: 0.9;
+  }
+
+  &:after {
+	@include back-overlay();
+	@include gradient-directional($brand-inverse-light, $brand-inverse, 125deg);
+	opacity: 0.95;
+	mix-blend-mode: multiply;
+    will-change: opacity;
+  }
+}

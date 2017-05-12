@@ -1,0 +1,224 @@
+<nav class="docs-sidebar">
+    <iframe src="./index.html" width="100%" height="100%" frameborder="0"></iframe>
+</nav>
+
+
+<div class="docs-content container-xl">
+    <!-- Grid, responsivnes and vilibility -->
+    <h2 class="display-3 m-y-5">
+        Grid
+    </h2>
+
+    <section id="Grid" class="m-y-5">
+        <p>
+            There is no fixed column based system (standart for Bootstrap) set here. Instead I use combination of flex
+            utilities that are more flexible and customisable. Plus, much less code.
+        </p>
+        <p>
+            Standard grid automatically adjust to the number of children blocks and make each of equal width. There are
+            2 variations of standard grid:
+        </p>
+        <h6 class="m-t-2">1. Grid without indent between blocks</h6>
+
+        <code class="block-code-large" data-lang="html">
+            &lt;div class="grid-{breackpoint}"><br>
+            &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+        <div class="grid-md">
+            <div class="p-a-0_5 bg-success">1. Here the text of the first column</div>
+            <div class="p-a-0_5 bg-danger"> 2. Look, all columns have equal width no matter how different content is in
+                each of then
+            </div>
+            <div class="p-a-0_5 bg-warning">3</div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <h6 class="m-t-3">1. Grid with indents (gaps) between blocks</h6>
+        <p>
+            Notice, that there indents also stays in vertical grid orientation (when resolution is smaller then
+            specified {breackpoint}).
+        </p>
+
+        <code class="block-code-large" data-lang="html">
+            &lt;div class="grid-{breackpoint}-gap"><br>
+            &nbsp; &nbsp; &lt;div>1&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+        <div class="grid-lg-gap">
+            <div class="p-a-0_5 bg-success">1. Here the text of the first column</div>
+            <div class="p-a-0_5 bg-danger"> 2. Look, all columns have equal width no matter how different content is in
+                each of then
+            </div>
+            <div class="p-a-0_5 bg-warning">3</div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <h4 class="m-t-5">Custom column width</h4>
+        <p>
+            If you would like to make colomns with non-equal widths, you can use on of the pre-made classes with custom
+            flex-basis number, or create a new one.
+        </p>
+        <h6 class="m-t-3">Persentage (responsive)</h6>
+        <p>
+            Fixed column width with number in percent, you can specify the width just for some columns, then the others
+            take the rest of the space with equal width each.
+            The width is valid only before the parent grid breakpoint, on smaller resolutions it will take 100% of the
+            space.
+            There are 4 pre-made responsive classes:
+        </p>
+
+        <div class="block-code m-t-0_5 m-b-2">
+            grid-col-10per-{breackpoint} <br>
+            grid-col-30per-{breackpoint} <br>
+            grid-col-50per-{breackpoint} <br>
+            grid-col-70per-{breackpoint}
+        </div>
+
+        <p>Example</p>
+        <div class="grid-md">
+            <div class="p-a-0_5 bg-success grid-col-50per-xs">50%</div>
+            <div class="p-a-0_5 bg-danger grid-col-30per-xs">30%</div>
+            <div class="p-a-0_5 bg-warning">3</div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <code class="block-code-large" data-lang="html">
+            &lt;div class="grid-{breackpoint}"><br>
+            &nbsp; &nbsp; &lt;div class="grid-col-50per-xs">1&lt;/div><br>
+            &nbsp; &nbsp; &lt;div class="grid-col-30per-xs">2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+        <h6 class="m-t-3">Fixed width</h6>
+        <p>
+            You can create a column with fixed width set in pixels, rem or em.
+            Same like in per cent option: you can specify the width just for some columns, then the others take the rest
+            of the space with equal width each.
+            There are 4 pre-made responsive classes:
+        </p>
+
+        <div class="block-code m-t-0_5 m-b-2">
+            grid-col-20rem<br>
+            grid-col-30rem<br>
+            grid-col-50rem<br>
+            grid-col-100rem
+        </div>
+
+        <p>Example</p>
+        <div class="grid-md">
+            <div class="p-a-0_5 bg-success grid-col-50rem">50rem</div>
+            <div class="p-a-0_5 bg-danger grid-col-100rem">100rem</div>
+            <div class="p-a-0_5 bg-warning">3</div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+        <code class="block-code-large" data-lang="html">
+            &lt;div class="grid-{breackpoint}"><br>
+            &nbsp; &nbsp; &lt;div class="grid-col-50per-xs">1&lt;/div><br>
+            &nbsp; &nbsp; &lt;div class="grid-col-30per-xs">2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+        <h4 class="m-t-3"><span class="text-primary text-weight-light text-sm">Example</span><br> Create custom column
+        </h4>
+        <p>
+            Let’s create a responsive grid with 4 columns, one custom and 3 equal sized.
+        </p>
+        <p>
+            1. The grid would break on small devises, so each column would take 100% of the available width.
+            Therefore we can use default class for that <code>grid-sm</code>.
+        </p>
+
+        <code class="block-code-large" data-lang="html">
+            &lt;div class="grid-sm"><br>
+            &nbsp; &nbsp; &lt;div class="grid-col__custom">Custom column&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+        <p>
+            2. On large devices the first column would take 50% of the space,
+            but not less then 500px. So we make a custom class <code>.grid-col__custom</code>
+            with breakpoint on lg. Add <code>flex-grow: 0;</code> to forbid the column to take more space, then 50%
+        </p>
+
+        <code class="block-code-large" data-lang="css">
+            .grid-col__custom {<br>
+            <br>
+            &nbsp; &nbsp; @include media-breakpoint-up(lg) {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; flex-basis: 50%;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; flex-grow: 0;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; min-width: 500px;<br>
+            &nbsp; &nbsp; }<br>
+            }
+        </code>
+
+        <p>
+            3. On medium devices the first column would take 100% of the space,
+            while other columns move to the next row and take the equal widths there. For that we add
+            <code>flex-basis: 100%;</code> to the <code>.grid-col__custom</code>.
+        </p>
+
+        <code class="block-code-large" data-lang="css">
+            .grid-col__custom {<br>
+            &nbsp; &nbsp; flex-basis: 100%;
+            <br>
+            &nbsp; &nbsp; @include media-breakpoint-up(lg) {<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; flex-basis: 50%;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; flex-grow: 0;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; min-width: 500px;<br>
+            &nbsp; &nbsp; }<br>
+            }
+        </code>
+        <p>
+            4. But because wrapping is not allowed for the parent grid by default, we add a modifier class to change it
+            on medium devices
+        </p>
+
+        <code class="block-code-large" data-lang="css">
+            .grid__custom {
+            <br>&nbsp; &nbsp; @include media-breakpoint-down(md) {
+            <br>&nbsp; &nbsp; &nbsp; &nbsp; flex-wrap: wrap;
+            <br>&nbsp; &nbsp; }
+            <br>}
+        </code>
+        <p>
+            So html should look like that
+        </p>
+        <code class="block-code-large" data-lang="html">
+            &lt;div class="grid-sm"><br>
+            &nbsp; &nbsp; &lt;div class="grid-col__custom">Custom column&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>2&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>3&lt;/div><br>
+            &nbsp; &nbsp; &lt;div>4&lt;/div><br>
+            &lt;/div>
+        </code>
+
+        <p>
+            This is all the magic. Here is the result. Resize the browser window to see how it changes on different
+            dimensions.
+        </p>
+
+        <div class="grid-sm grid__custom">
+            <div class="p-a-0_5 bg-success grid-col__custom">Custom</div>
+            <div class="p-a-0_5 bg-danger">2</div>
+            <div class="p-a-0_5 bg-warning">3</div>
+            <div class="p-a-0_5 bg-inverse">4</div>
+        </div>
+
+    </section>
+</div>

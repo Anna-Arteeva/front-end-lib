@@ -1,0 +1,39 @@
+.table .table-row-group {
+  border-top: 1px solid $gray-outline;
+
+  td {
+	border-top: 0;
+  }
+}
+
+//this one can be outside of the table
+.table-title {
+  padding-left: $table-cell-padding;
+}
+
+
+.table {
+  .table-price {
+	text-align: right;
+	font-weight: $font-weight-regular;
+  }
+
+  // Make the in-between prices in table-row-group have light weight
+  .table-row-group {
+	tr:not(:last-of-type) {
+	  .table-price {
+		font-weight: $font-weight-base;
+
+		&[class$="subtotal"] {
+		  font-weight: $font-weight-regular;
+		}
+	  }
+	}
+  }
+}
+
+
+.table .table-checkbox {
+  padding-right: .1rem;
+  width: 1.5rem;
+}

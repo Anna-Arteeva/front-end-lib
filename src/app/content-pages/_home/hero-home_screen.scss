@@ -1,0 +1,77 @@
+.hero-home_screen {
+  width: var(--width);
+
+  @include media-breakpoint-down(md) {
+	margin: auto;
+  }
+}
+
+.hero-home_screen_top {
+  background-color: rgba($brand-primary, .8); //TODO make gradient
+
+  border-top-right-radius: $screen-border-radius;
+  border-top-left-radius:  $screen-border-radius;
+  border-bottom-right-radius: .3rem;
+  border-bottom-left-radius:  .3rem;
+
+  padding: $screen-frame;
+}
+
+.hero-home_screen_inside {
+  position: relative;
+  overflow: hidden;
+  border-radius:  .3rem;
+
+  width: $screen-width-inside;
+  height: $screen-height-inside;
+
+  &:before {
+	@include hero-back($hero-back-img);
+	top: inherit;
+	bottom: $screen-inside-map-bottom; // height of the bottom part + stand + margings TODO responsive
+
+	@include media-breakpoint-up(lg) {
+	  bottom: $screen-inside-map-bottom; // height of the bottom part + stand + margings TODO responsive
+	  left: calc(-50vw - #{$screen-frame} - 1.5rem); // extract screen padding and container margin TODO down md
+	}
+
+	@include media-breakpoint-up(xl) {
+	  left: calc(-50vw - #{$screen-frame} - 3rem); // extract screen padding and container margin TODO down md
+	}
+  }
+}
+
+.hero-home_screen_bottom {
+  margin: .1rem 0;
+
+  background-color: rgba($brand-primary, .5); //TODO make gradient
+  height: $screen-height-bottom;
+
+  border-bottom-right-radius: $screen-border-radius;
+  border-bottom-left-radius:  $screen-border-radius;
+  border-top-right-radius: .3rem;
+  border-top-left-radius:  .3rem;
+}
+
+.home-screen_stand {
+  svg {
+	width: 44%;
+	margin: auto;
+	display: block; // does it change anything?
+  }
+}
+
+.hero-home_screen_frame-card {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+	width: 25rem;
+	max-width: 80%;
+	height: 100%;
+  }
+}

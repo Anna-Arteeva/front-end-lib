@@ -1,0 +1,14 @@
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:            .75rem !default;
+$table-lg-cell-padding:         1rem !default;
+$table-md-cell-padding:         .5rem !default;
+$table-sm-cell-padding:         .3rem !default;
+
+$table-bg:                      transparent !default;
+$table-bg-accent:               $gray-back !default;
+$table-bg-hover:                rgba($gray-outline, .2) !default;
+$table-bg-active:               $table-bg-hover !default;
+
+$table-border-width:            $border-width !default;
+$table-border-color:            $gray-outline !default;

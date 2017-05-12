@@ -1,0 +1,26 @@
+.p-lead {
+  font-size: $font-size-lg;
+  opacity: .9;
+  line-height: 1.8em;
+  font-weight: $font-weight-light;
+
+  max-width: 45rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5em;
+
+  ~ .p-lead {
+    margin-bottom: .2em;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: $font-size-base;
+  }
+}
+
+
+.p-lead__inverse {
+  color: rgba(#fff, .8);
+}
+
+.text-condensed p { margin-top: .3em; margin-bottom: .3em;   }
+.text-expanded  p { margin-top: 1.3em; margin-bottom: 1.3em; }

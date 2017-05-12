@@ -1,0 +1,45 @@
+
+@mixin make-grid($grid-gutter: $grid-gutter) {
+  display: flex;
+
+  > * {
+	flex-grow: 1;
+    flex-basis: 0;
+
+	&:not(:last-child) {
+	  margin-right: $grid-gutter;
+
+	  @include media-breakpoint-up(xl) {
+		margin-right: $grid-gutter * 1.8; // make the gap bigger on larger devices. test if it looks good
+	  }
+
+      @include media-breakpoint-up(xxl) {
+        margin-right: $grid-gutter * 2.5; // make the gap bigger on larger devices. test if it looks good
+      }
+
+      &.flex-wrap {
+        margin-bottom: $grid-gutter;
+      }
+	}
+  }
+
+  &.flex-wrap > * {
+    margin-bottom: $grid-gutter;
+  }
+}
+
+// This mixing for a grid modifier class that makes all children elements equal width or bigger !if there is enough space.
+//You can make it strict by adding flex-grow:0;
+
+@mixin grid($columns, $grid-gutter: $grid-gutter) {
+  flex-basis: calc(100% / #{$columns} - #{$grid-gutter} * 2);
+  max-width: calc(100% / #{$columns} - #{$grid-gutter} * 2);
+}
+
+
+// Set width for a particular column
+
+@mixin grid-col($column-width, $grid-gutter: $grid-gutter) {
+  flex-basis: calc(#{$column-width} - #{$grid-gutter} * 2);
+  flex-grow: 0;
+}

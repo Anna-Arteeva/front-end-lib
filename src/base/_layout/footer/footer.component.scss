@@ -1,0 +1,149 @@
+.main-footer {
+  border-top: 1px solid $gray-outline;
+  color: $gray-base-light;
+  font-size: .9rem;
+}
+
+.main-footer_container {
+  padding: 4rem 2rem 1.5rem;
+  @include make-container($container-max-width-xl);
+
+  @include media-breakpoint-down(md) {
+    padding: 3rem 1rem 1rem;
+  }
+}
+
+.main-footer_link {
+  @include link($gray-base-light, $gray-base-light);
+}
+
+.main-footer_top {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-down(xs) {
+    > * {
+    margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Brand block
+
+.main-footer_brand {
+  flex-basis: 15rem;
+  flex-grow: 2;
+
+}
+
+.main-footer_logo {
+  margin-bottom: 1.5rem;
+}
+
+
+// Footer lists
+
+.main-footer_list {
+  flex-basis: 9rem;
+
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+
+    .main-footer_title {
+      display: inline-block;
+      &:after {
+        content: ':';
+        margin-left: -.1rem;
+      }
+    }
+  }
+}
+
+.main-footer_list__last {
+  @include media-breakpoint-down(sm) {
+    margin-right: 0 !important;
+  }
+}
+
+.main-footer_li {
+  display: inline-block;
+
+  @include media-breakpoint-down(xs) {
+    padding: .3rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+    margin: .6rem 0;
+
+    &:first-of-type {
+      margin-top: 1.3rem;
+    }
+  }
+}
+
+.main-footer_title {
+  font-size: .9rem;
+}
+
+// Subscribtion form and social buttons
+
+.main-footer_last-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+
+  @include media-breakpoint-down(sm) {
+    flex-grow: 2;
+
+    margin-top: 3rem;
+    text-align: center;
+    align-items: stretch;
+  }
+}
+
+.main-footer_subscribe {
+  min-width: 18rem;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 30rem;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+.main-footer_subscribe_form {
+  margin-top: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+// Footer bottom
+.main-footer_bottom {
+  border-top: 1px solid $gray-outline;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.main-footer_copy {
+  text-align: center;
+  font-size: $font-size-sm;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
+}

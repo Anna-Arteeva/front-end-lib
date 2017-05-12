@@ -1,0 +1,20 @@
+.logo-svg {
+  fill: $brand-primary;
+  height: 33px;
+  max-width: 100%;
+  display: block;
+}
+
+.logo-svg-sign {}
+
+.logo-svg-text {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.logo-svg_wrapper {
+  @include media-breakpoint-down(md) {
+   width: 174px;
+  }
+}

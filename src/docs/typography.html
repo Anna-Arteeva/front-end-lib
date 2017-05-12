@@ -1,0 +1,306 @@
+<nav class="docs-sidebar">
+    <iframe src="./index.html" width="100%" height="100%" frameborder="0"></iframe>
+</nav>
+
+
+<div class="docs-content container-xl ">
+
+    <h2 class="display-3 m-y-5">
+        Typography
+    </h2>
+
+    <section id="Typography">
+        <h4 class="m-t-3">Headings</h4>
+        <div class="docs-block-outline">
+            <h1>h1 heading <span class="block-code">&lt;h1&gt; or class: h1</span></h1>
+            <h2>h2 heading <span class="block-code">&lt;h2&gt; or class: h2</span></h2>
+            <h3>h3 heading <span class="block-code">&lt;h3&gt; or class: h3</span></h3>
+            <h4>h4 heading <span class="block-code">&lt;h4&gt; or class: h4</span></h4>
+            <h5>h5 heading <span class="block-code">&lt;h5&gt; or class: h5</span></h5>
+            <h6>h6 heading <span class="block-code">&lt;h6&gt; or class: h6</span></h6>
+
+            <h5 class="subtitle m-t-2">
+                Subtitle
+                <span class="block-code">class: "subtitle" in combination with any of headers tag</span>
+            </h5>
+
+            <p class="display-1">Display 1 <span class="block-code">class: display-1</span></p>
+            <p class="display-2">Display 2 <span class="block-code">class: display-2</span></p>
+            <p class="display-3">Display 3 <span class="block-code">class: display-3</span></p>
+
+        </div>
+
+        <h4 class="m-t-3">Paragraphs</h4>
+        <div class="docs-block-outline">
+            <h6>Lead paragraph</h6>
+            <p>
+                <span class="block-code">
+				&lt;p class="p-lead"&gt;
+			</span>
+            </p>
+            <p class="p-lead">
+                Lead paragraph is used at the beginging of a page or chapter. <br>
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+                We listen to all of our clients to ensure we understand the business needs of each and every customer
+                and are united with you in the drive to get the best from your project.
+            </p>
+
+            <h6 class="m-t-3">Default paragraph</h6>
+            <p>
+                <span class="block-code">
+				&lt;p&gt;
+			</span>
+            </p>
+            <p>
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+            </p>
+            <p>
+                Next paragraph. We listen to all of our clients to ensure we understand the business needs of each and
+                every customer
+                and are united with you in the drive to get the best from your project.
+            </p>
+        </div>
+
+        <h4 class="m-t-3">Lists</h4>
+        <p>
+            All lists — <code>&lt;ul></code>, <code>&lt;ol></code>, and <code>&lt;dl></code>—have their margin-top
+            removed and a margin-bottom: 1rem. Nested lists have no margin-bottom.
+        </p>
+        <div class="docs-block-outline">
+
+            <h6>Default list (nested)</h6>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Nulla volutpat aliquam velit
+                    <ul>
+                        <li>Phasellus iaculis neque</li>
+                        <li>Purus sodales ultricies</li>
+                        <li>Vestibulum laoreet porttitor sem</li>
+                        <li>Ac tristique libero volutpat at</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h6 class="m-t-3">Unstyled list</h6>
+            <p>
+                <span class="block-code">
+				&lt;ul class="list-unstyled"&gt;
+			</span>
+            </p>
+            <ul class="list-unstyled">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Nulla volutpat aliquam velit</li>
+            </ul>
+
+            <h6 class="m-t-3">Inlined list</h6>
+            <p>
+                <span class="block-code">
+				&lt;ul class="list-inline"&gt;
+			</span>
+            </p>
+            <ul class="list-inline">
+                <li>Tea</li>
+                <li>Coffee</li>
+                <li>Cacao</li>
+                <li>Juice</li>
+                <li>Soda</li>
+            </ul>
+
+
+            <h6 class="m-t-3">Numeric list</h6>
+            <p>
+                <span class="block-code">
+				&lt;ul class="list-inline"&gt;
+			</span>
+            </p>
+            <ol>
+                <li>Tea</li>
+                <li>Coffee</li>
+                <li>Cacao</li>
+                <li>Juice</li>
+                <li>Soda</li>
+            </ol>
+        </div>
+
+        <h4 class="m-t-3">Inline text elements</h4>
+        <p class="m-b-2">
+            All lists — <code>&lt;ul></code>, <code>&lt;ol></code>, and <code>&lt;dl></code>—have their margin-top
+            removed and a margin-bottom: 1rem. Nested lists have no margin-bottom.
+        </p>
+        <div class="docs-block-outline">
+            <p>You can use the mark tag to
+                <mark>highlight</mark>
+                text.
+            </p>
+            <p>
+                <del>This line of text is meant to be treated as deleted text.</del>
+            </p>
+            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+            <p>
+                <ins>This line of text is meant to be treated as an addition to the document.</ins>
+            </p>
+            <p><u>This line of text will render as underlined</u></p>
+            <p>
+                <small>This line of text is meant to be treated as fine print.</small>
+            </p>
+            <p><strong>This line rendered as bold text.</strong></p>
+            <p><em>This line rendered as italicized text.</em></p>
+
+            <code class="block-code-large m-b-0" data-lang="html">
+                &lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
+                <br>&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
+                <br>&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
+                <br>&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt; &lt;p&gt;&lt;small&gt;
+                <br>This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+                <br>&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+                <br>&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+            </code>
+        </div>
+
+
+        <h6 class="subtitle m-t-3">Text utilities</h6>
+        <h4>Text alignment</h4>
+        <p class="m-b-2">
+            All alignment classes can be responsive, just add a breakpont suffix at the end of the class.
+        </p>
+        <p>
+            Example: use <code>&lt;p class="text-center-lg"></code> to center text only on large (lg) resolution.
+        </p>
+        <p>
+            Non responsive version are also available.
+        </p>
+        <div class="docs-block-outline">
+            <h6>Left</h6>
+            <p class="">
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+            </p>
+            <p class="block-code">
+                &lt;p class="text-left"&gt; <br>
+                &lt;p class="text-left-xs"&gt; <br>
+                &lt;p class="text-left-sm"&gt; <br>
+                &lt;p class="text-left-md"&gt; <br>
+                &lt;p class="text-left-lg"&gt; <br>
+                &lt;p class="text-left-xl"&gt;
+            </p>
+
+            <h6 class="m-t-3">Right</h6>
+            <p class="text-right">
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+            </p>
+            <p class="block-code">
+                &lt;p class="text-right"&gt; <br>
+                &lt;p class="text-right-xs"&gt; <br>
+                &lt;p class="text-right-sm"&gt; <br>
+                &lt;p class="text-right-md"&gt; <br>
+                &lt;p class="text-right-lg"&gt; <br>
+                &lt;p class="text-right-xl"&gt;
+            </p>
+            <h6 class="m-t-3">Center</h6>
+            <p class="text-center">
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+            </p>
+            <p class="block-code">
+                &lt;p class="text-center"&gt; <br>
+                &lt;p class="text-center-xs"&gt; <br>
+                &lt;p class="text-center-sm"&gt; <br>
+                &lt;p class="text-center-md"&gt; <br>
+                &lt;p class="text-center-lg"&gt; <br>
+                &lt;p class="text-center-xl"&gt;
+            </p>
+
+            <h6 class="m-t-3">Justify</h6>
+            <p class="text-justify">
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+            </p>
+            <p class="block-code">
+                &lt;p class="text-justify"&gt; <br>
+                &lt;p class="text-justify-xs"&gt; <br>
+                &lt;p class="text-justify-sm"&gt; <br>
+                &lt;p class="text-justify-md"&gt; <br>
+                &lt;p class="text-justify-lg"&gt; <br>
+                &lt;p class="text-justify-xl"&gt;
+            </p>
+
+            <h6 class="m-t-3">Nowrap</h6>
+            <p class="block-code">text-nowrap</p>
+
+            <h6 class="m-t-3">Text-truncate</h6>
+            <p>Рide the text when it exceeds the boundaries of the block</p>
+            <p class="block-code">text-nowrap</p>
+            <div class="text-truncate border-outline" style="max-width:200px;">
+                Lorem ipsum text: Because our desire to produce exceptional solutions while offering the best customer
+                support runs deep.
+            </div>
+        </div>
+
+        <h4 class="m-t-3">Font size</h4>
+        <div class="docs-block-outline">
+            <p class="text-xs">Text xs <code class="block-code">text-xs</code></p>
+            <p class="text-sm">Text sm <code class="block-code">text-sm</code></p>
+            <p class="text-md">Text md <code class="block-code">text-md</code></p>
+            <p class="text-size-base">Text size base <code class="block-code">text-size-base</code></p>
+            <p class="text-lg">Text lg <code class="block-code">text-lg</code></p>
+            <p class="text-xlg">Text xlg <code class="block-code">text-xlg</code></p>
+            <p class="text-xl">Text xl <code class="block-code">text-xl</code></p>
+            <p class="text-xxl">Text xxl <code class="block-code">text-xxl</code></p>
+        </div>
+
+        <h4 class="m-t-3">Font weight</h4>
+        <div class="docs-block-outline">
+            <p class="text-weight-base">Base <code class="block-code">text-weight-base</code></p>
+            <p class="strong">Strong <code class="block-code">Strong</code></p>
+            <p class="text-weight-regular">Regular <code class="block-code">text-weight-regular</code></p>
+            <p class="text-weight-light">Light <code class="block-code">text-weight-light</code></p>
+        </div>
+
+        <h4 class="m-t-3">Links</h4>
+        <div class="docs-block-outline">
+            <p><a href="#" class="">Default link</a> <code class="block-code">&lt;a> or &lt;a class="link"></code></p>
+            <p><a href="#" class="link-brand-underline">Brand color underlined</a> <code class="block-code">&lt;a
+                class="link-brand-underline"></code></p>
+            <p><a href="#" class="link-brand-plain">Brand color no underline</a> <code class="block-code">&lt;a
+                class="link-brand-underline"></code></p>
+            <p><a href="#" class="link-base-plain">Base color no underline</a> <code class="block-code">&lt;a
+                class="link-base-plain"></code></p>
+            <p><a href="#" class="link-base-underline">Base color with underline</a> <code class="block-code">&lt;a
+                class="link-base-underline"></code></p>
+            <p class="back-inverse"><a href="#" class="link-white-plain">White color no underline</a> <code
+                    class="block-code_inverse">&lt;a class="link-white-plain"></code></p>
+            <p class="back-inverse"><a href="#" class="link-white-alpha">Semi transparent white color no underline</a>
+                <code class="block-code_inverse">&lt;a class="link-white-plain"></code></p>
+
+        </div>
+
+        <h4 class="m-t-3">Separating line</h4>
+        <hr class="m-y-1">
+        <span class="block-code d-inline-block m-t-0_3 m-b-1">
+				&lt;hr>
+        </span>
+
+        <h4 class="m-t-3">Text colors</h4>
+        <div class="docs-block-outline">
+            <p class="text-base">Gray base <code class="block-code">text-base</code></p>
+            <p class="text-dark">Gray dark <code class="block-code">text-dark</code></p>
+            <p class="text-base-light">Gray light <code class="block-code">text-base-light</code></p>
+            <p class="text-muted">text-muted <code class="block-code">text-muted</code></p>
+            <p class="text-primary">text-primary <code class="block-code">text-primary</code></p>
+            <p class="text-secondary">text-secondary <code class="block-code">text-secondary</code></p>
+            <p class="text-success">text-success <code class="block-code">text-success</code></p>
+            <p class="text-info">text-info <code class="block-code">text-info</code></p>
+            <p class="text-warning">text-warning <code class="block-code">text-warning</code></p>
+            <p class="text-danger">text-danger <code class="block-code">text-danger</code></p>
+            <p class="text-white">text-white <code class="block-code">text-white</code></p>
+             </div>
+    </section>
+</div>

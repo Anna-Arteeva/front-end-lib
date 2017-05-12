@@ -1,0 +1,163 @@
+<nav class="docs-sidebar">
+    <iframe src="./index.html" width="100%" height="100%" frameborder="0"></iframe>
+</nav>
+
+
+<div class="docs-content container-xl">
+    <section class=" m-y-5">
+        <h5 class="subtitle">
+            Getting started
+        </h5>
+        <h1>
+            Signkick CSS framework
+        </h1>
+
+        <p class="p-lead">
+            This CSS framework build for Signkick need and uses its styleguides.
+            It has a modified version of Bootstrap in its core codebase and uses BEM methodology.
+        </p>
+    </section>
+
+    <h2 class="display-3 m-y-5">
+        Architecture
+    </h2>
+
+
+    <!--Architecture-->
+    <section id="architecture">
+        <p>
+            Global frontend architecture is a combination of Angular 2 principals with its component-centured approach,
+            and BEM methodology to make code DRY, improve the web performance and standardise visual elements.
+        </p>
+        <p>
+            Front end source code is distributed in 3 directories:
+        </p>
+
+        <div class="block-code-large">
+            src/<br>
+            <p class="p-l-2">
+                ├─ app/ - custom Angular components
+            </p>
+            <p class="p-l-2">
+                ├─ base/ - CSS framework
+            </p>
+            <p class="p-l-2">
+                ├─ theme/ - css variables sorted by type
+            </p>
+        </div>
+
+        <p>
+            <code>base/</code> directory includes global css settings, normalise and reboot files, styles of basic
+            reusable UI elements, utilities and mixings
+        </p>
+
+        <div class="block-code-large">
+            <p>
+                base/
+
+            </p>
+            <p class="p-l-2">
+                ├─ _base.scss
+                <span class="code-comment">
+                - compounding all files
+            </span>
+            </p>
+            <p class="p-l-2">
+                ├─ _mixins.scss <span class="code-comment">- compounding all mixings</span>
+            </p>
+            <p class="p-l-2">
+                ├─ _mixins/
+
+            <h6 class="text-sm m-t-1 p-l-2">GLOBAL STYLES</h6>
+            </p>
+            <p class="p-l-2">
+                ├─ _normalize.scss
+            </p>
+            <p class="p-l-2">
+                ├─ _reboot.scss
+
+            </p>
+
+
+            <h6 class="text-sm m-t-1 p-l-2">UI ELEMENTS</h6>
+            </p>
+            <p class="p-l-2">
+                ├─ buttons/
+            </p>
+            <p class="p-l-2">
+                ├─ card/
+            </p>
+            <p class="p-l-2">
+                ├─ carousel/ - remove?..
+            </p>
+            <p class="p-l-2">
+                ├─ container/ - rename?..
+            </p>
+            <p class="p-l-2">
+                ├─ dropdown/
+            </p>
+            <p class="p-l-2">
+                ├─ forms/
+            </p>
+            <p class="p-l-2">
+                ├─ grid/
+            </p>
+            <p class="p-l-2">
+                ├─ icons/ - clean up, remove css icons, include FA
+            </p>
+            <p class="p-l-2">
+                ├─ images/
+            </p>
+            <p class="p-l-2">
+                ├─ _layout/
+                <span class="code-comment">
+            - basic layout elements (nav, fooler etc.)
+            </span>
+            </p>
+            <p class="p-l-2">
+                ├─ pagination/
+            </p>
+            <p class="p-l-2">
+                ├─ responsive/ - move to utilities?
+            </p>
+            <p class="p-l-2">
+                ├─ spinner/
+            </p>
+            <p class="p-l-2">
+                ├─ tables/
+            </p>
+            <p class="p-l-2">
+                ├─ tabs/
+            </p>
+            <p class="p-l-2">
+                ├─ tags/
+            </p>
+
+            <p class="p-l-2">
+                ├─ text/
+            </p>
+            <p class="p-l-2">
+                ├─ tooltip/
+            </p>
+
+            <h6 class="text-sm m-t-1 p-l-2">UTILITIES</h6>
+            <p class="p-l-2">
+                ├─ _utilities/
+                <span class="code-comment">
+                - helper classes for quick usage in html
+            </span>
+            </p>
+
+            <p class="p-l-3">
+                ├─ _background.scss
+            </p>
+            <p class="p-l-3">
+                ├─ _display.scss
+            </p>
+            <p class="p-l-3">
+                ├─ _flex.scss
+            </p>
+        </div>
+    </section>
+
+</div>
