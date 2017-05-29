@@ -19,7 +19,3 @@ This module can be deployed separately from the rest of the application, and sho
 * Writing tests
 * Code review
 * Other guidelines
-
-### Who do I talk to? ###
-
-* Anna Arteeva or Sebastiaan Schinkel
